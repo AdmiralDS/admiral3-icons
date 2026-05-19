@@ -1,0 +1,1508 @@
+[
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Abkhazia.svg",
+    "isoCode": "ABH",
+    "name": "Abkhazia",
+    "rusName": "Абхазия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Afghanistan.svg",
+    "isoCode": "AFG",
+    "name": "Afghanistan",
+    "rusName": "Афганистан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/AlandIslands.svg",
+    "isoCode": "ALA",
+    "name": "AlandIslands",
+    "rusName": "Аландские острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Albania.svg",
+    "isoCode": "ALB",
+    "name": "Albania",
+    "rusName": "Албания"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Algeria.svg",
+    "isoCode": "DZA",
+    "name": "Algeria",
+    "rusName": "Алжир"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/AmericanSamoa.svg",
+    "isoCode": "ASM",
+    "name": "AmericanSamoa",
+    "rusName": "Американское Самоа"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Andorra.svg",
+    "isoCode": "AND",
+    "name": "Andorra",
+    "rusName": "Андорра"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Angola.svg",
+    "isoCode": "AGO",
+    "name": "Angola",
+    "rusName": "Ангола"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Anguilla.svg",
+    "isoCode": "AIA",
+    "name": "Anguilla",
+    "rusName": "Ангилья"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Antarctica.svg",
+    "isoCode": "ATA",
+    "name": "Antarctica",
+    "rusName": "Антарктида"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/AntiguaAndBarbuda.svg",
+    "isoCode": "ATG",
+    "name": "AntiguaAndBarbuda",
+    "rusName": "Антигуа и Барбуда"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Argentina.svg",
+    "isoCode": "ARG",
+    "name": "Argentina",
+    "rusName": "Аргентина"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Armenia.svg",
+    "isoCode": "ARM",
+    "name": "Armenia",
+    "rusName": "Армения"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Aruba.svg",
+    "isoCode": "ABW",
+    "name": "Aruba",
+    "rusName": "Аруба"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Australia.svg",
+    "isoCode": "AUS",
+    "name": "Australia",
+    "rusName": "Австралия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Austria.svg",
+    "isoCode": "AUT",
+    "name": "Austria",
+    "rusName": "Австрия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Azerbaijan.svg",
+    "isoCode": "AZE",
+    "name": "Azerbaijan",
+    "rusName": "Азербайджан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Bahamas.svg",
+    "isoCode": "BHS",
+    "name": "Bahamas",
+    "rusName": "Багамские острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Bahrain.svg",
+    "isoCode": "BHR",
+    "name": "Bahrain",
+    "rusName": "Бахрейн"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Bangladesh.svg",
+    "isoCode": "BGD",
+    "name": "Bangladesh",
+    "rusName": "Бангладеш"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Barbados.svg",
+    "isoCode": "BRB",
+    "name": "Barbados",
+    "rusName": "Барбадос"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Belarus.svg",
+    "isoCode": "BLR",
+    "name": "Belarus",
+    "rusName": "Белоруссия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Belgium.svg",
+    "isoCode": "BEL",
+    "name": "Belgium",
+    "rusName": "Бельгия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Belize.svg",
+    "isoCode": "BLZ",
+    "name": "Belize",
+    "rusName": "Белиз"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Benin.svg",
+    "isoCode": "BEN",
+    "name": "Benin",
+    "rusName": "Бенин"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Bermuda.svg",
+    "isoCode": "BMU",
+    "name": "Bermuda",
+    "rusName": "Бермудские острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Bhutan.svg",
+    "isoCode": "BTN",
+    "name": "Bhutan",
+    "rusName": "Бутан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Bolivia.svg",
+    "isoCode": "BOL",
+    "name": "Bolivia",
+    "rusName": "Боливия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Bonaire.svg",
+    "isoCode": "BES",
+    "name": "Bonaire",
+    "rusName": "Бонэйр"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/BosniaAndHerzegovina.svg",
+    "isoCode": "BIH",
+    "name": "BosniaAndHerzegovina",
+    "rusName": "Босния и Герцеговина"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Botswana.svg",
+    "isoCode": "BWA",
+    "name": "Botswana",
+    "rusName": "Ботсвана"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/BouvetIsland.svg",
+    "isoCode": "BVT",
+    "name": "BouvetIsland",
+    "rusName": "Остров Буве"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Brazil.svg",
+    "isoCode": "BRA",
+    "name": "Brazil",
+    "rusName": "Бразилия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/BritishIndianOceanTerritory.svg",
+    "isoCode": "IOT",
+    "name": "BritishIndianOceanTerritory",
+    "rusName": "Британская территория в Индийском океане"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/BritishVirginIslands.svg",
+    "isoCode": "VGB",
+    "name": "BritishVirginIslands",
+    "rusName": "Британские Виргинские Острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/BruneiDarussalam.svg",
+    "isoCode": "BRN",
+    "name": "BruneiDarussalam",
+    "rusName": "Бруней"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Bulgaria.svg",
+    "isoCode": "BGR",
+    "name": "Bulgaria",
+    "rusName": "Болгария"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/BurkinaFaso.svg",
+    "isoCode": "BFA",
+    "name": "BurkinaFaso",
+    "rusName": "Буркина-Фасо"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Burundi.svg",
+    "isoCode": "BDI",
+    "name": "Burundi",
+    "rusName": "Бурунди"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/CaboVerde.svg",
+    "isoCode": "CPV",
+    "name": "CaboVerde",
+    "rusName": "Кабо-Верде"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Cambodia.svg",
+    "isoCode": "KHM",
+    "name": "Cambodia",
+    "rusName": "Камбоджа"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Cameroon.svg",
+    "isoCode": "CMR",
+    "name": "Cameroon",
+    "rusName": "Камерун"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Canada.svg",
+    "isoCode": "CAN",
+    "name": "Canada",
+    "rusName": "Канада"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/CaymanIslands.svg",
+    "isoCode": "CYM",
+    "name": "CaymanIslands",
+    "rusName": "Каймановы острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/CentralAfricanRepublic.svg",
+    "isoCode": "CAF",
+    "name": "CentralAfricanRepublic",
+    "rusName": "Центральноафриканская Республика"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Chad.svg",
+    "isoCode": "TCD",
+    "name": "Chad",
+    "rusName": "Чад"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Chile.svg",
+    "isoCode": "CHL",
+    "name": "Chile",
+    "rusName": "Чили"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/China.svg",
+    "isoCode": "CHN",
+    "name": "China",
+    "rusName": "Китай"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/ChristmasIsland.svg",
+    "isoCode": "CXR",
+    "name": "ChristmasIsland",
+    "rusName": "Остров Рождества"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/CocosKeelingIslands.svg",
+    "isoCode": "CCK",
+    "name": "CocosKeelingIslands",
+    "rusName": "Территория Кокосовых островов (Килинг)"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Colombia.svg",
+    "isoCode": "COL",
+    "name": "Colombia",
+    "rusName": "Колумбия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Comoros.svg",
+    "isoCode": "COM",
+    "name": "Comoros",
+    "rusName": "Коморы"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/CongoDemocraticRepublic.svg",
+    "isoCode": "COD",
+    "name": "CongoDemocraticRepublic",
+    "rusName": "Демократическая Республика Конго"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/CongoRepublic.svg",
+    "isoCode": "COG",
+    "name": "CongoRepublic",
+    "rusName": "Конго"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/CookIslands.svg",
+    "isoCode": "COK",
+    "name": "CookIslands",
+    "rusName": "Острова Кука"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/CostaRica.svg",
+    "isoCode": "CRI",
+    "name": "CostaRica",
+    "rusName": "Коста-Рика"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/CoteDIvoire.svg",
+    "isoCode": "CIV",
+    "name": "CoteDIvoire",
+    "rusName": "Кот-д'Ивуар"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Croatia.svg",
+    "isoCode": "HRV",
+    "name": "Croatia",
+    "rusName": "Хорватия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Cuba.svg",
+    "isoCode": "CUB",
+    "name": "Cuba",
+    "rusName": "Куба"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Curacao.svg",
+    "isoCode": "CUW",
+    "name": "Curacao",
+    "rusName": "Кюрасао"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Cyprus.svg",
+    "isoCode": "CYP",
+    "name": "Cyprus",
+    "rusName": "Кипр"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Czechia.svg",
+    "isoCode": "CZE",
+    "name": "Czechia",
+    "rusName": "Чехия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Denmark.svg",
+    "isoCode": "DNK",
+    "name": "Denmark",
+    "rusName": "Дания"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Djibouti.svg",
+    "isoCode": "DJI",
+    "name": "Djibouti",
+    "rusName": "Джибути"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Dominica.svg",
+    "isoCode": "DMA",
+    "name": "Dominica",
+    "rusName": "Доминика"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/DominicanRepublic.svg",
+    "isoCode": "DOM",
+    "name": "DominicanRepublic",
+    "rusName": "Доминиканская Республика"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Ecuador.svg",
+    "isoCode": "ECU",
+    "name": "Ecuador",
+    "rusName": "Эквадор"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Egypt.svg",
+    "isoCode": "EGY",
+    "name": "Egypt",
+    "rusName": "Египет"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/ElSalvador.svg",
+    "isoCode": "SLV",
+    "name": "ElSalvador",
+    "rusName": "Сальвадор"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/EquatorialGuinea.svg",
+    "isoCode": "GNQ",
+    "name": "EquatorialGuinea",
+    "rusName": "Экваториальная Гвинея"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Eritrea.svg",
+    "isoCode": "ERI",
+    "name": "Eritrea",
+    "rusName": "Эритрея"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Estonia.svg",
+    "isoCode": "EST",
+    "name": "Estonia",
+    "rusName": "Эстония"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Eswatini.svg",
+    "isoCode": "SWZ",
+    "name": "Eswatini",
+    "rusName": "Эсватини"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Ethiopia.svg",
+    "isoCode": "ETH",
+    "name": "Ethiopia",
+    "rusName": "Эфиопия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/EuropeanUnion.svg",
+    "isoCode": "EU",
+    "name": "EuropeanUnion",
+    "rusName": "Европейский союз"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/FalklandIslands.svg",
+    "isoCode": "FLK",
+    "name": "FalklandIslands",
+    "rusName": "Фолклендские острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/FaroeIslands.svg",
+    "isoCode": "FRO",
+    "name": "FaroeIslands",
+    "rusName": "Фарерские острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Fiji.svg",
+    "isoCode": "FJI",
+    "name": "Fiji",
+    "rusName": "Фиджи"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Finland.svg",
+    "isoCode": "FIN",
+    "name": "Finland",
+    "rusName": "Финляндия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/France.svg",
+    "isoCode": "FRA",
+    "name": "France",
+    "rusName": "Франция"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/FrenchGuiana.svg",
+    "isoCode": "GUF",
+    "name": "FrenchGuiana",
+    "rusName": "Французская Гвиана"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/FrenchPolynesia.svg",
+    "isoCode": "PYF",
+    "name": "FrenchPolynesia",
+    "rusName": "Французская Полинезия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/FrenchSouthernAndAntarcticTerritories.svg",
+    "isoCode": "ATF",
+    "name": "FrenchSouthernAndAntarcticTerritories",
+    "rusName": "Французские Южные и Антарктические территории"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Gabon.svg",
+    "isoCode": "GAB",
+    "name": "Gabon",
+    "rusName": "Габон"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Gambia.svg",
+    "isoCode": "GMB",
+    "name": "Gambia",
+    "rusName": "Гамбия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Georgia.svg",
+    "isoCode": "GEO",
+    "name": "Georgia",
+    "rusName": "Грузия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Germany.svg",
+    "isoCode": "DEU",
+    "name": "Germany",
+    "rusName": "Германия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Ghana.svg",
+    "isoCode": "GHA",
+    "name": "Ghana",
+    "rusName": "Гана"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Gibraltar.svg",
+    "isoCode": "GIB",
+    "name": "Gibraltar",
+    "rusName": "Гибралтар"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Greece.svg",
+    "isoCode": "GRC",
+    "name": "Greece",
+    "rusName": "Греция"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Greenland.svg",
+    "isoCode": "GRL",
+    "name": "Greenland",
+    "rusName": "Гренландия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Grenada.svg",
+    "isoCode": "GRD",
+    "name": "Grenada",
+    "rusName": "Гренада"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Guadeloupe.svg",
+    "isoCode": "GLP",
+    "name": "Guadeloupe",
+    "rusName": "Гваделупа"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Guam.svg",
+    "isoCode": "GUM",
+    "name": "Guam",
+    "rusName": "Территория Гуам"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Guatemala.svg",
+    "isoCode": "GTM",
+    "name": "Guatemala",
+    "rusName": "Гватемала"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Guernsey.svg",
+    "isoCode": "GGY",
+    "name": "Guernsey",
+    "rusName": "Гернси"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Guinea.svg",
+    "isoCode": "GIN",
+    "name": "Guinea",
+    "rusName": "Гвинея"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/GuineaBissau.svg",
+    "isoCode": "GNB",
+    "name": "GuineaBissau",
+    "rusName": "Гвинея-Бисау"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Guyana.svg",
+    "isoCode": "GUY",
+    "name": "Guyana",
+    "rusName": "Гайана"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Haiti.svg",
+    "isoCode": "HTI",
+    "name": "Haiti",
+    "rusName": "Гаити"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/HeardIslandAndMcDonaldIslands.svg",
+    "isoCode": "HMD",
+    "name": "HeardIslandAndMcDonaldIslands",
+    "rusName": "Остров Херд и острова Макдональд"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/HolySee.svg",
+    "isoCode": "VAT",
+    "name": "HolySee",
+    "rusName": "Государство-город Ватикан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Honduras.svg",
+    "isoCode": "HND",
+    "name": "Honduras",
+    "rusName": "Гондурас"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/HongKong.svg",
+    "isoCode": "HKG",
+    "name": "HongKong",
+    "rusName": "Гонконг"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Hungary.svg",
+    "isoCode": "HUN",
+    "name": "Hungary",
+    "rusName": "Венгрия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Iceland.svg",
+    "isoCode": "ISL",
+    "name": "Iceland",
+    "rusName": "Исландия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/India.svg",
+    "isoCode": "IND",
+    "name": "India",
+    "rusName": "Индия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Indonesia.svg",
+    "isoCode": "IDN",
+    "name": "Indonesia",
+    "rusName": "Индонезия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Iran.svg",
+    "isoCode": "IRN",
+    "name": "Iran",
+    "rusName": "Иран"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Iraq.svg",
+    "isoCode": "IRQ",
+    "name": "Iraq",
+    "rusName": "Ирак"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Ireland.svg",
+    "isoCode": "IRL",
+    "name": "Ireland",
+    "rusName": "Ирландия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/IsleOfMan.svg",
+    "isoCode": "IMN",
+    "name": "IsleOfMan",
+    "rusName": "Остров Мэн"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Israel.svg",
+    "isoCode": "ISR",
+    "name": "Israel",
+    "rusName": "Израиль"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Italy.svg",
+    "isoCode": "ITA",
+    "name": "Italy",
+    "rusName": "Италия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Jamaica.svg",
+    "isoCode": "JAM",
+    "name": "Jamaica",
+    "rusName": "Ямайка"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Japan.svg",
+    "isoCode": "JPN",
+    "name": "Japan",
+    "rusName": "Япония"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Jersey.svg",
+    "isoCode": "JEY",
+    "name": "Jersey",
+    "rusName": "Джерси"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Jordan.svg",
+    "isoCode": "JOR",
+    "name": "Jordan",
+    "rusName": "Иордания"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Kazakhstan.svg",
+    "isoCode": "KAZ",
+    "name": "Kazakhstan",
+    "rusName": "Казахстан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Kenya.svg",
+    "isoCode": "KEN",
+    "name": "Kenya",
+    "rusName": "Кения"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/KoreaNorth.svg",
+    "isoCode": "PRK",
+    "name": "KoreaNorth",
+    "rusName": "Северная Корея"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/KoreaSouth.svg",
+    "isoCode": "KOR",
+    "name": "KoreaSouth",
+    "rusName": "Южная Корея"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Kuwait.svg",
+    "isoCode": "KWT",
+    "name": "Kuwait",
+    "rusName": "Кувейт"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Kyrgyzstan.svg",
+    "isoCode": "KGZ",
+    "name": "Kyrgyzstan",
+    "rusName": "Киргизия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/LaoPeopleSDemocraticRepublic.svg",
+    "isoCode": "LAO",
+    "name": "LaoPeopleSDemocraticRepublic",
+    "rusName": "Лаос"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Latvia.svg",
+    "isoCode": "LVA",
+    "name": "Latvia",
+    "rusName": "Латвия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Lebanon.svg",
+    "isoCode": "LBN",
+    "name": "Lebanon",
+    "rusName": "Ливан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Lesotho.svg",
+    "isoCode": "LSO",
+    "name": "Lesotho",
+    "rusName": "Лесото"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Liberia.svg",
+    "isoCode": "LBR",
+    "name": "Liberia",
+    "rusName": "Либерия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Libya.svg",
+    "isoCode": "LBY",
+    "name": "Libya",
+    "rusName": "Ливия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Liechtenstein.svg",
+    "isoCode": "LIE",
+    "name": "Liechtenstein",
+    "rusName": "Лихтенштейн"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Lithuania.svg",
+    "isoCode": "LTU",
+    "name": "Lithuania",
+    "rusName": "Литва"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Luxembourg.svg",
+    "isoCode": "LUX",
+    "name": "Luxembourg",
+    "rusName": "Люксембург"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Macao.svg",
+    "isoCode": "MAC",
+    "name": "Macao",
+    "rusName": "Макао"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Madagascar.svg",
+    "isoCode": "MDG",
+    "name": "Madagascar",
+    "rusName": "Мадагаскар"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Malawi.svg",
+    "isoCode": "MWI",
+    "name": "Malawi",
+    "rusName": "Малави"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Malaysia.svg",
+    "isoCode": "MYS",
+    "name": "Malaysia",
+    "rusName": "Малайзия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Maldives.svg",
+    "isoCode": "MDV",
+    "name": "Maldives",
+    "rusName": "Мальдивы"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Mali.svg",
+    "isoCode": "MLI",
+    "name": "Mali",
+    "rusName": "Мали"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Malta.svg",
+    "isoCode": "MLT",
+    "name": "Malta",
+    "rusName": "Мальта"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/MarshallIslands.svg",
+    "isoCode": "MHL",
+    "name": "MarshallIslands",
+    "rusName": "Маршалловы Острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Martinique.svg",
+    "isoCode": "MTQ",
+    "name": "Martinique",
+    "rusName": "Мартиника"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Mauritania.svg",
+    "isoCode": "MRT",
+    "name": "Mauritania",
+    "rusName": "Мавритания"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Mauritius.svg",
+    "isoCode": "MUS",
+    "name": "Mauritius",
+    "rusName": "Маврикий"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Mayotte.svg",
+    "isoCode": "MYT",
+    "name": "Mayotte",
+    "rusName": "Майотта"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Mexico.svg",
+    "isoCode": "MEX",
+    "name": "Mexico",
+    "rusName": "Мексика"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Micronesia.svg",
+    "isoCode": "FSM",
+    "name": "Micronesia",
+    "rusName": "Микронезия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Moldova.svg",
+    "isoCode": "MDA",
+    "name": "Moldova",
+    "rusName": "Молдавия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Monaco.svg",
+    "isoCode": "MCO",
+    "name": "Monaco",
+    "rusName": "Монако"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Mongolia.svg",
+    "isoCode": "MNG",
+    "name": "Mongolia",
+    "rusName": "Монголия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Montenegro.svg",
+    "isoCode": "MNE",
+    "name": "Montenegro",
+    "rusName": "Черногория"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Montserrat.svg",
+    "isoCode": "MSR",
+    "name": "Montserrat",
+    "rusName": "Монтсеррат"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Morocco.svg",
+    "isoCode": "MAR",
+    "name": "Morocco",
+    "rusName": "Марокко"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Mozambique.svg",
+    "isoCode": "MOZ",
+    "name": "Mozambique",
+    "rusName": "Мозамбик"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Myanmar.svg",
+    "isoCode": "MMR",
+    "name": "Myanmar",
+    "rusName": "Мьянма"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Namibia.svg",
+    "isoCode": "NAM",
+    "name": "Namibia",
+    "rusName": "Намибия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Nauru.svg",
+    "isoCode": "NRU",
+    "name": "Nauru",
+    "rusName": "Науру"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Nepal.svg",
+    "isoCode": "NPL",
+    "name": "Nepal",
+    "rusName": "Непал"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Netherlands.svg",
+    "isoCode": "NLD",
+    "name": "Netherlands",
+    "rusName": "Нидерланды"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/NetherlandsAntillesCountry.svg",
+    "isoCode": "ANT",
+    "name": "NetherlandsAntillesCountry",
+    "rusName": "Нидерландские Антильские острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/NewCaledonia.svg",
+    "isoCode": "NCL",
+    "name": "NewCaledonia",
+    "rusName": "Новая Каледония"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/NewZealand.svg",
+    "isoCode": "NZL",
+    "name": "NewZealand",
+    "rusName": "Новая Зеландия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Nicaragua.svg",
+    "isoCode": "NIC",
+    "name": "Nicaragua",
+    "rusName": "Никарагуа"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Niger.svg",
+    "isoCode": "NER",
+    "name": "Niger",
+    "rusName": "Нигер"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Nigeria.svg",
+    "isoCode": "NGA",
+    "name": "Nigeria",
+    "rusName": "Нигерия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Niue.svg",
+    "isoCode": "NIU",
+    "name": "Niue",
+    "rusName": "Ниуэ"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/NorfolkIsland.svg",
+    "isoCode": "NFK",
+    "name": "NorfolkIsland",
+    "rusName": "Остров Норфолк"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/NorthMacedonia.svg",
+    "isoCode": "MKD",
+    "name": "NorthMacedonia",
+    "rusName": "Северная Македония"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/NorthernMarianaIslands.svg",
+    "isoCode": "MNP",
+    "name": "NorthernMarianaIslands",
+    "rusName": "Северные Марианские Острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Norway.svg",
+    "isoCode": "NOR",
+    "name": "Norway",
+    "rusName": "Норвегия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Oman.svg",
+    "isoCode": "OMN",
+    "name": "Oman",
+    "rusName": "Оман"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Pakistan.svg",
+    "isoCode": "PAK",
+    "name": "Pakistan",
+    "rusName": "Пакистан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Palau.svg",
+    "isoCode": "PLW",
+    "name": "Palau",
+    "rusName": "Палау"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Palestine.svg",
+    "isoCode": "PSE",
+    "name": "Palestine",
+    "rusName": "Палестина"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Panama.svg",
+    "isoCode": "PAN",
+    "name": "Panama",
+    "rusName": "Панама"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/PapuaNewGuinea.svg",
+    "isoCode": "PNG",
+    "name": "PapuaNewGuinea",
+    "rusName": "Папуа-Новая Гвинея"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Paraguay.svg",
+    "isoCode": "PRY",
+    "name": "Paraguay",
+    "rusName": "Парагвай"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Peru.svg",
+    "isoCode": "PER",
+    "name": "Peru",
+    "rusName": "Перу"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Philippines.svg",
+    "isoCode": "PHL",
+    "name": "Philippines",
+    "rusName": "Филиппины"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Pitcairn.svg",
+    "isoCode": "PCN",
+    "name": "Pitcairn",
+    "rusName": "Острова Питкэрн"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Poland.svg",
+    "isoCode": "POL",
+    "name": "Poland",
+    "rusName": "Польша"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Portugal.svg",
+    "isoCode": "PRT",
+    "name": "Portugal",
+    "rusName": "Португалия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/PuertoRico.svg",
+    "isoCode": "PRI",
+    "name": "PuertoRico",
+    "rusName": "Пуэрто-Рико"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Qatar.svg",
+    "isoCode": "QAT",
+    "name": "Qatar",
+    "rusName": "Катар"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/RepublicOfKiribati.svg",
+    "isoCode": "KIR",
+    "name": "RepublicOfKiribati",
+    "rusName": "Кирибати"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Reunion.svg",
+    "isoCode": "REU",
+    "name": "Reunion",
+    "rusName": "Реюньон"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Romania.svg",
+    "isoCode": "ROU",
+    "name": "Romania",
+    "rusName": "Румыния"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/RussianFederation.svg",
+    "isoCode": "RUS",
+    "name": "RussianFederation",
+    "rusName": "Россия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Rwanda.svg",
+    "isoCode": "RWA",
+    "name": "Rwanda",
+    "rusName": "Руанда"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SaintBarthelemy.svg",
+    "isoCode": "BLM",
+    "name": "SaintBarthelemy",
+    "rusName": "Сен-Бартелеми"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SaintHelena.svg",
+    "isoCode": "SHN",
+    "name": "SaintHelena",
+    "rusName": "Остров Святой Елены"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SaintKittsAndNevis.svg",
+    "isoCode": "KNA",
+    "name": "SaintKittsAndNevis",
+    "rusName": "Сент-Китс и Невис"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SaintLucia.svg",
+    "isoCode": "LCA",
+    "name": "SaintLucia",
+    "rusName": "Сент-Люсия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SaintMartin.svg",
+    "isoCode": "MAF",
+    "name": "SaintMartin",
+    "rusName": "Сен-Мартен"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SaintPierreAndMiquelon.svg",
+    "isoCode": "SPM",
+    "name": "SaintPierreAndMiquelon",
+    "rusName": "Сент-Пьер и Микелон"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SaintVincentAndTheGrenadines.svg",
+    "isoCode": "VCT",
+    "name": "SaintVincentAndTheGrenadines",
+    "rusName": "Сент-Винсент и Гренадины"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Samoa.svg",
+    "isoCode": "WSM",
+    "name": "Samoa",
+    "rusName": "Самоа"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SanMarino.svg",
+    "isoCode": "SMR",
+    "name": "SanMarino",
+    "rusName": "Сан-Марино"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SaoTomeAndPrincipe.svg",
+    "isoCode": "STP",
+    "name": "SaoTomeAndPrincipe",
+    "rusName": "Сан-Томе и Принсипи"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SaudiArabia.svg",
+    "isoCode": "SAU",
+    "name": "SaudiArabia",
+    "rusName": "Саудовская Аравия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Senegal.svg",
+    "isoCode": "SEN",
+    "name": "Senegal",
+    "rusName": "Сенегал"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Serbia.svg",
+    "isoCode": "SRB",
+    "name": "Serbia",
+    "rusName": "Сербия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Seychelles.svg",
+    "isoCode": "SYC",
+    "name": "Seychelles",
+    "rusName": "Сейшелы"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SierraLeone.svg",
+    "isoCode": "SLE",
+    "name": "SierraLeone",
+    "rusName": "Сьерра-Леоне"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Singapore.svg",
+    "isoCode": "SGP",
+    "name": "Singapore",
+    "rusName": "Сингапур"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SintMaarten.svg",
+    "isoCode": "SXM",
+    "name": "SintMaarten",
+    "rusName": "Синт-Мартен (Нидерландская Часть)"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Slovakia.svg",
+    "isoCode": "SVK",
+    "name": "Slovakia",
+    "rusName": "Словакия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Slovenia.svg",
+    "isoCode": "SVN",
+    "name": "Slovenia",
+    "rusName": "Словения"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SolomonIslands.svg",
+    "isoCode": "SLB",
+    "name": "SolomonIslands",
+    "rusName": "Соломоновы острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Somalia.svg",
+    "isoCode": "SOM",
+    "name": "Somalia",
+    "rusName": "Сомали"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SouthAfrica.svg",
+    "isoCode": "ZAF",
+    "name": "SouthAfrica",
+    "rusName": "Южная Африка"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SouthGeorgiaAndTheSouthSandwichIslands.svg",
+    "isoCode": "SGS",
+    "name": "SouthGeorgiaAndTheSouthSandwichIslands",
+    "rusName": "Южная Георгия и Южные Сандвичевы Острова"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SouthSudan.svg",
+    "isoCode": "SSD",
+    "name": "SouthSudan",
+    "rusName": "Южный Судан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Spain.svg",
+    "isoCode": "ESP",
+    "name": "Spain",
+    "rusName": "Испания"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SriLanka.svg",
+    "isoCode": "LKA",
+    "name": "SriLanka",
+    "rusName": "Шри-Ланка"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Sudan.svg",
+    "isoCode": "SDN",
+    "name": "Sudan",
+    "rusName": "Судан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Suriname.svg",
+    "isoCode": "SUR",
+    "name": "Suriname",
+    "rusName": "Суринам"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Sweden.svg",
+    "isoCode": "SWE",
+    "name": "Sweden",
+    "rusName": "Швеция"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Switzerland.svg",
+    "isoCode": "CHE",
+    "name": "Switzerland",
+    "rusName": "Швейцария"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SyrianArabRepublic.svg",
+    "isoCode": "SYR",
+    "name": "SyrianArabRepublic",
+    "rusName": "Сирия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Taiwan.svg",
+    "isoCode": "TWN",
+    "name": "Taiwan",
+    "rusName": "Тайвань"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Tajikistan.svg",
+    "isoCode": "TJK",
+    "name": "Tajikistan",
+    "rusName": "Таджикистан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Tanzania.svg",
+    "isoCode": "TZA",
+    "name": "Tanzania",
+    "rusName": "Танзания"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Thailand.svg",
+    "isoCode": "THA",
+    "name": "Thailand",
+    "rusName": "Таиланд"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/TimorLeste.svg",
+    "isoCode": "TLS",
+    "name": "TimorLeste",
+    "rusName": "Восточный Тимор"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Togo.svg",
+    "isoCode": "TGO",
+    "name": "Togo",
+    "rusName": "Того"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Tokelau.svg",
+    "isoCode": "TKL",
+    "name": "Tokelau",
+    "rusName": "Токелау"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Tonga.svg",
+    "isoCode": "TON",
+    "name": "Tonga",
+    "rusName": "Тонга"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/TrinidadAndTobago.svg",
+    "isoCode": "TTO",
+    "name": "TrinidadAndTobago",
+    "rusName": "Тринидад и Тобаго"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Tunisia.svg",
+    "isoCode": "TUN",
+    "name": "Tunisia",
+    "rusName": "Тунис"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Turkey.svg",
+    "isoCode": "TUR",
+    "name": "Turkey",
+    "rusName": "Турция"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Turkmenistan.svg",
+    "isoCode": "TKM",
+    "name": "Turkmenistan",
+    "rusName": "Туркменистан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/TurksAndCaicosIslands.svg",
+    "isoCode": "TCA",
+    "name": "TurksAndCaicosIslands",
+    "rusName": "Острова Теркс и Кайкос"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Tuvalu.svg",
+    "isoCode": "TUV",
+    "name": "Tuvalu",
+    "rusName": "Тувалу"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Uganda.svg",
+    "isoCode": "UGA",
+    "name": "Uganda",
+    "rusName": "Уганда"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Ukraine.svg",
+    "isoCode": "UKR",
+    "name": "Ukraine",
+    "rusName": "Украина"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/UnitedArabEmirates.svg",
+    "isoCode": "ARE",
+    "name": "UnitedArabEmirates",
+    "rusName": "Объединенные Арабские Эмираты"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/UnitedKingdomOfGreatBritainAndNorthernIreland.svg",
+    "isoCode": "GBR",
+    "name": "UnitedKingdomOfGreatBritainAndNorthernIreland",
+    "rusName": "Великобритания"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/UnitedStatesMinorOutlyingIslands.svg",
+    "isoCode": "UMI",
+    "name": "UnitedStatesMinorOutlyingIslands",
+    "rusName": "Внешние малые острова США"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/UnitedStatesOfAmerica.svg",
+    "isoCode": "USA",
+    "name": "UnitedStatesOfAmerica",
+    "rusName": "Соединенные Штаты Америки"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Uruguay.svg",
+    "isoCode": "URY",
+    "name": "Uruguay",
+    "rusName": "Уругвай"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Uzbekistan.svg",
+    "isoCode": "UZB",
+    "name": "Uzbekistan",
+    "rusName": "Узбекистан"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Vanuatu.svg",
+    "isoCode": "VUT",
+    "name": "Vanuatu",
+    "rusName": "Вануату"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Venezuela.svg",
+    "isoCode": "VEN",
+    "name": "Venezuela",
+    "rusName": "Венесуэла"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/VietNam.svg",
+    "isoCode": "VNM",
+    "name": "VietNam",
+    "rusName": "Вьетнам"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/VirginIslandsOfTheUnitedStates.svg",
+    "isoCode": "VIR",
+    "name": "VirginIslandsOfTheUnitedStates",
+    "rusName": "Виргинские Острова, Сша"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/WallisAndFutuna.svg",
+    "isoCode": "WLF",
+    "name": "WallisAndFutuna",
+    "rusName": "Уоллис и Футуна"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/WesternSahara.svg",
+    "isoCode": "ESH",
+    "name": "WesternSahara",
+    "rusName": "Западная Сахара"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Yemen.svg",
+    "isoCode": "YEM",
+    "name": "Yemen",
+    "rusName": "Йемен"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Zambia.svg",
+    "isoCode": "ZMB",
+    "name": "Zambia",
+    "rusName": "Замбия"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Zimbabwe.svg",
+    "isoCode": "ZWE",
+    "name": "Zimbabwe",
+    "rusName": "Зимбабве"
+  }
+]

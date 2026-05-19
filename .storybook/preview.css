@@ -1,0 +1,41 @@
+body.sb-theme-dark,
+body.sb-theme-dark #storybook-root,
+body.sb-theme-dark .sb-show-main,
+body.sb-theme-dark .sb-main-padded,
+body.sb-theme-dark .docs-story {
+  font-family: var(--admiral-typography-primitives-font-family-primary);
+  color-scheme: dark;
+  background: var(--admiral-color-base-neutral-base1-rest);
+  color: var(--admiral-color-text-neutral-text1-rest);
+}
+
+body.sb-theme-light,
+body.sb-theme-light #storybook-root,
+body.sb-theme-light .sb-show-main,
+body.sb-theme-light .sb-main-padded,
+body.sb-theme-light .docs-story {
+  font-family: var(--admiral-typography-primitives-font-family-primary);
+  color-scheme: light;
+  background: var(--admiral-color-base-neutral-base1-rest);
+  color: var(--admiral-color-text-neutral-text1-rest);
+}
+
+.docs-story {
+  box-sizing: border-box;
+  min-block-size: 180px;
+  padding: 32px;
+}
+
+.docs-story > div:first-child {
+  box-sizing: border-box;
+  min-block-size: 116px;
+  inline-size: 100%;
+  min-inline-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.docs-story > div:first-child > * {
+  min-inline-size: 0;
+}

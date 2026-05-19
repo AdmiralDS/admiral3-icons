@@ -1,0 +1,103 @@
+{
+  "name": "@admiral-ds/admiral3-icons",
+  "version": "0.0.0",
+  "description": "SVG icon package for Admiral design system 3.0",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./flags": {
+      "types": "./dist/flags.d.ts",
+      "import": "./dist/flags.js"
+    }
+  },
+  "keywords": [
+    "AdmiralDS",
+    "Admiral",
+    "icons",
+    "react",
+    "svg"
+  ],
+  "author": "Admiral DS team",
+  "license": "See license in ./LICENSE",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "icons:update": "python3 scripts/update_icons_from_zip.py && npm run build-meta",
+    "check:fix": "npm run format && npm run lint:fix",
+    "check:full": "npm run format:check && npm run lint && npm run typecheck && npm run test:exports && npm run test:e2e && npm run test:visual",
+    "storybook": "storybook dev -p 6006",
+    "playground": "vite --config vite.playground.config.ts",
+    "release": "standard-version",
+    "build": "npm run build-meta && vite build && tsc -p tsconfig.lib.json",
+    "build-meta": "node scripts/formatSvg.cjs && node scripts/createMetadata.js && node scripts/generate-svg-icon-exports.cjs",
+    "storybook:build": "storybook build",
+    "playground:build": "vite build --config vite.playground.config.ts",
+    "playground:serve": "serve -s dist-playground -l 4173",
+    "pack:check": "npm pack --dry-run",
+    "test:exports": "npm run build && node scripts/test-package-exports.cjs",
+    "test:e2e": "npm run build && npm run playground:build && playwright test",
+    "test:e2e-ui": "npm run build && npm run playground:build && playwright test --ui",
+    "test:visual": "npm run build && npm run playground:build && playwright test --config playwright.visual.config.ts",
+    "test:visual:update": "npm run build && npm run playground:build && playwright test --config playwright.visual.config.ts --update-snapshots",
+    "lint:fix": "eslint . --fix",
+    "lint": "eslint .",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "typecheck": "tsc -b tsconfig.json",
+    "dev": "vite"
+  },
+  "peerDependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@admiral-ds/admiral3-tokens": "~0.0.2",
+    "@emnapi/core": "^1.10.0",
+    "@emnapi/runtime": "^1.10.0",
+    "@eslint/js": "^9.39.4",
+    "@playwright/test": "^1.58.2",
+    "@storybook/addon-a11y": "^10.3.3",
+    "@storybook/addon-docs": "^10.3.3",
+    "@storybook/react-vite": "^10.3.3",
+    "@types/node": "^24.12.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "dotenv": "^17.3.1",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "eslint-plugin-storybook": "^10.3.3",
+    "fs-extra": "^11.3.2",
+    "globals": "^17.4.0",
+    "prettier": "3.8.1",
+    "serve": "^14.2.5",
+    "standard-version": "^9.5.0",
+    "storybook": "^10.3.3",
+    "styled-components": "^6.4.1",
+    "svgo": "^4.0.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.57.0",
+    "vite": "^8.0.1",
+    "vite-plugin-svgr": "^4.5.0"
+  },
+  "repository": "https://github.com/AdmiralDS/admiral3-icons",
+  "bugs": {
+    "url": "https://github.com/AdmiralDS/admiral3-icons/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
