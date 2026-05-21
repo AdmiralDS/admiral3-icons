@@ -1,6 +1,6 @@
 {
   "name": "@admiral-ds/admiral3-icons",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "SVG icon package for Admiral design system 3.0",
   "type": "module",
   "types": "./dist/index.d.ts",
