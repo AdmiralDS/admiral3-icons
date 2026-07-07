@@ -37,7 +37,7 @@ const IconWrapper = styled.div`
 
 const ExampleName = styled.span`
   max-width: 100%;
-  color: var(--admiral-color-text-neutral-text2-rest);
+  color: var(--admiral-color-neutral-text-2-rest);
   ${typography.textStyles.caption.caption1};
   overflow-wrap: anywhere;
   text-align: center;
@@ -46,22 +46,22 @@ const ExampleName = styled.span`
 const examples = [
   {
     name: 'ServicePlusOutline',
-    color: 'var(--admiral-color-text-primary-text1-rest)',
+    color: 'var(--admiral-color-primary-text-1-rest)',
     Icon: ServicePlusOutline,
   },
   {
     name: 'ServiceCheckOutline',
-    color: 'var(--admiral-color-text-status-success-text1-rest)',
+    color: 'var(--admiral-color-success-text-1-rest)',
     Icon: ServiceCheckOutline,
   },
   {
     name: 'DocumentsCopyOutline',
-    color: 'var(--admiral-color-text-status-error-text1-rest)',
+    color: 'var(--admiral-color-error-text-1-rest)',
     Icon: DocumentsCopyOutline,
   },
   {
     name: 'FinanceCardOutline',
-    color: 'var(--admiral-color-text-extra-purple-text1-rest)',
+    color: 'var(--admiral-color-purple-text-1-rest)',
     Icon: FinanceCardOutline,
   },
 ] as const;
@@ -74,9 +74,9 @@ export const CurrentColorTemplate = () => (
       CSS-свойство <Code>color</Code>. Передавайте цвет на сам компонент, родительский контейнер или через{' '}
       <Code>className</Code> - SVG унаследует его автоматически.
     </Text>
-    <Panel>{`<ServicePlusOutline style={{ color: 'var(--admiral-color-text-primary-text1-rest)' }} />
+    <Panel>{`<ServicePlusOutline style={{ color: 'var(--admiral-color-primary-text-1-rest)' }} />
 
-<span style={{ color: 'var(--admiral-color-text-status-success-text1-rest)' }}>
+<span style={{ color: 'var(--admiral-color-success-text-1-rest)' }}>
   <ServiceCheckOutline />
 </span>`}</Panel>
     <Text>

@@ -50,8 +50,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     min-height: 100dvh;
-    color: var(--admiral-color-text-neutral-text1-rest);
-    background: var(--admiral-color-base-neutral-base1-rest);
+    color: var(--admiral-color-neutral-text-1-rest);
+    background: var(--admiral-color-neutral-base-1-rest);
     font-family: ${typography.primitives.fontFamily.primary};
   }
 
@@ -66,8 +66,8 @@ const PlaygroundShell = styled.main`
   align-items: start;
   min-height: 100dvh;
   padding: 12px;
-  color: var(--admiral-color-text-neutral-text1-rest);
-  background: var(--admiral-color-base-neutral-base1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
+  background: var(--admiral-color-neutral-base-1-rest);
 `;
 
 const PlaygroundHeader = styled.header`
@@ -78,7 +78,7 @@ const PlaygroundHeader = styled.header`
   height: fit-content;
   gap: 16px;
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--admiral-color-stroke-neutral-subtle-rest);
+  border-bottom: 1px solid var(--admiral-color-neutral-stroke-subtle-rest);
 `;
 
 const PageTitle = styled.h1`
@@ -95,17 +95,17 @@ const HeaderControls = styled.div`
 `;
 
 const ThemeLabel = styled.label`
-  color: var(--admiral-color-text-neutral-text2-rest);
+  color: var(--admiral-color-neutral-text-2-rest);
   ${typography.textStyles.body.body2Long};
 `;
 
 const ThemeSelect = styled.select`
   min-height: 32px;
   padding: 0 8px;
-  color: var(--admiral-color-text-neutral-text1-rest);
-  border: 1px solid var(--admiral-color-stroke-neutral-stroke1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
+  border: 1px solid var(--admiral-color-neutral-stroke-1-rest);
   border-radius: var(--admiral-radius-by-base-4-medium);
-  background: var(--admiral-color-base-neutral-base1-rest);
+  background: var(--admiral-color-neutral-base-1-rest);
   ${typography.textStyles.body.body2Long};
 `;
 
@@ -125,13 +125,13 @@ const PlaygroundSidebar = styled.aside`
   align-self: start;
   height: 100%;
   padding: 4px;
-  border-right: 1px solid var(--admiral-color-stroke-neutral-subtle-rest);
+  border-right: 1px solid var(--admiral-color-neutral-stroke-subtle-rest);
 
   @media (max-width: 900px) {
     padding-right: 0;
     padding-bottom: 20px;
     border-right: 0;
-    border-bottom: 1px solid var(--admiral-color-stroke-neutral-subtle-rest);
+    border-bottom: 1px solid var(--admiral-color-neutral-stroke-subtle-rest);
   }
 `;
 
@@ -149,15 +149,15 @@ const PlaygroundContent = styled.section`
 
 const PlaygroundToggle = styled.button`
   padding: 0;
-  color: var(--admiral-color-text-neutral-text1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
   text-decoration: underline;
   cursor: pointer;
   border: 0;
-  background: var(--admiral-color-base-neutral-base1-rest);
+  background: var(--admiral-color-neutral-base-1-rest);
   ${typography.textStyles.body.body2Long};
 
   &:hover {
-    color: var(--admiral-color-text-primary-text1-hover);
+    color: var(--admiral-color-primary-text-1-hover);
   }
 `;
 
@@ -170,7 +170,7 @@ const PlaygroundNavLink = styled.a`
   display: block;
   overflow: hidden;
   padding: 2px 0;
-  color: var(--admiral-color-text-neutral-text1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
   text-overflow: ellipsis;
   text-decoration: none;
   white-space: nowrap;
@@ -179,7 +179,7 @@ const PlaygroundNavLink = styled.a`
 
   &:hover,
   &[aria-current='page'] {
-    color: var(--admiral-color-text-primary-text1-rest);
+    color: var(--admiral-color-primary-text-1-rest);
   }
 `;
 
