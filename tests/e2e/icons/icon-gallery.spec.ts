@@ -15,7 +15,7 @@ test.describe('Icons playground', () => {
     await expect(page.getByRole('heading', { name: 'Internal E2E Playground' })).toBeVisible();
     await expect(page.getByRole('link', { name: 'Icons Gallery' })).toHaveAttribute('aria-current', 'page');
     await expect(page.getByTestId('icon-gallery')).toBeVisible();
-    await expect(page.getByTestId('category-card')).toHaveCount(12);
+    await expect(page.getByTestId('category-card')).toHaveCount(11);
   });
 
   test('keeps token theme controls available for visual scenarios', async ({ page }) => {
@@ -73,16 +73,11 @@ test.describe('Icons playground', () => {
     expect(colors.renderedFill).toBe(colors.inheritedColor);
   });
 
-  test('keeps colored bank and flag icons independent from currentColor', async ({ page }) => {
+  test('keeps colored flag icons independent from currentColor', async ({ page }) => {
     await page.goto(getPlaygroundScenarioPath(visualScenarioId), { waitUntil: 'networkidle' });
     await expect(page.getByTestId('icon-visual-snapshots')).toBeVisible();
 
     const coloredIcons = [
-      {
-        category: 'bank',
-        name: 'Sber',
-        coloredPathSelector: 'svg [fill="#009d1c"]',
-      },
       {
         category: 'flags',
         name: 'RussianFederation',

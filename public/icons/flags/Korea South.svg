@@ -1,5 +1,5 @@
 <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.000000" height="28.000000" fill="none" customFrame="#000000">
-	<mask id="mask_131" width="9.333333" height="9.333333" x="9.333374" y="9.333313" maskUnits="userSpaceOnUse">
+	<mask id="mask_697" width="9.333333" height="9.333333" x="9.333374" y="9.333313" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
 			<path id="Mask" d="M14 18.6666C16.5774 18.6666 18.6667 16.5773 18.6667 14C18.6667 11.4227 16.5774 9.33331 14 9.33331C11.4227 9.33331 9.33337 11.4227 9.33337 14C9.33337 16.5773 11.4227 18.6666 14 18.6666Z" fill="rgb(224,27,65)" fill-rule="evenodd" />
 			<path id="Mask" d="M18.6667 14C18.6667 11.4227 16.5774 9.33331 14 9.33331C11.4227 9.33331 9.33337 11.4227 9.33337 14C9.33337 16.5773 11.4227 18.6666 14 18.6666C16.5774 18.6666 18.6667 16.5773 18.6667 14Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
@@ -10,7 +10,7 @@
 			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
 		</filter>
 	</defs>
-	<mask id="mask_130" width="28.000000" height="20.000000" x="0.000000" y="4.000000" maskUnits="userSpaceOnUse">
+	<mask id="mask_696" width="28.000000" height="20.000000" x="0.000000" y="4.000000" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
 			<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 			<rect id="Mask" width="27.500000" height="19.500000" x="0.250000" y="4.250000" rx="2.750000" stroke="rgb(245,245,245)" stroke-width="0.500000" />
@@ -19,11 +19,11 @@
 	<rect id="Korea South" width="28.000000" height="28.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 	<rect id="Mask" width="27.500000" height="19.500000" x="0.250000" y="4.250000" rx="2.750000" stroke="rgb(214,216,221)" stroke-width="0.500000" />
-	<g mask="url(#mask_130)">
+	<g mask="url(#mask_696)">
 		<g id="Oval 9">
 			<path id="Mask" d="M14 18.6666C16.5774 18.6666 18.6667 16.5773 18.6667 14C18.6667 11.4227 16.5774 9.33331 14 9.33331C11.4227 9.33331 9.33337 11.4227 9.33337 14C9.33337 16.5773 11.4227 18.6666 14 18.6666Z" fill="rgb(224,27,65)" fill-rule="evenodd" />
 			<path id="Mask" d="M18.6667 14C18.6667 11.4227 16.5774 9.33331 14 9.33331C11.4227 9.33331 9.33337 11.4227 9.33337 14C9.33337 16.5773 11.4227 18.6666 14 18.6666C16.5774 18.6666 18.6667 16.5773 18.6667 14Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-			<g mask="url(#mask_131)">
+			<g mask="url(#mask_697)">
 				<path id="Rectangle 277" d="M9.33331 14.6667C10.6666 15.9167 12.6666 16.6667 14 14.6667C15.3333 12.6667 18 12.6667 18.6666 14.6667C19.3333 16.6667 18.6666 18.6667 18.6666 18.6667L9.33331 18.6667C9.33331 18.6667 7.99998 13.4167 9.33331 14.6667Z" fill="rgb(14,75,156)" fill-rule="evenodd" />
 				<path id="Rectangle 277" d="M14 14.6667C15.3333 12.6667 18 12.6667 18.6666 14.6667C19.3333 16.6667 18.6666 18.6667 18.6666 18.6667L9.33331 18.6667C9.33331 18.6667 7.99998 13.4167 9.33331 14.6667C10.6666 15.9167 12.6666 16.6667 14 14.6667Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 			</g>

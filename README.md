@@ -4,7 +4,7 @@
 
 Пакет поставляет иконки в виде готовых React-компонентов.
 
-Иконки сгруппированы по категориям: `bank`, `category`, `communication`, `documents`, `finance`, `flags`, `location`, `logo`, `redact`, `security`, `service`, `system`.
+Иконки сгруппированы по категориям: `category`, `communication`, `documents`, `finance`, `flags`, `location`, `logo`, `redact`, `security`, `service`, `system`.
 
 ## Каталог иконок
 

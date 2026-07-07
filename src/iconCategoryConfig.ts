@@ -1,7 +1,6 @@
 export type IconCategoryConfig = {
   label: string;
   value:
-    | 'bank'
     | 'category'
     | 'communication'
     | 'documents'
@@ -16,7 +15,6 @@ export type IconCategoryConfig = {
 };
 
 export const ICON_CATEGORY_CONFIG: Array<IconCategoryConfig> = [
-  { label: 'Bank', value: 'bank' },
   { label: 'Category', value: 'category' },
   { label: 'Communication', value: 'communication' },
   { label: 'Documents', value: 'documents' },
