@@ -28,7 +28,6 @@ const metadataByCategory = metadata as Record<IconCategoryConfig['value'], Array
 type IconPack = Partial<Record<string, IconComponent>>;
 
 const iconPackMap = {
-  bank: Icons,
   category: Icons,
   communication: Icons,
   documents: Icons,
@@ -61,6 +60,6 @@ export const FLAGS_CATEGORIES = CATEGORIES.filter(({ value }) => value === 'flag
 
 export const ICON_CATEGORIES = CATEGORIES.filter(({ value }) => value !== 'flags');
 
-export const ORIGINAL_COLOR_CATEGORIES = new Set<IconCategoryConfig['value']>(['bank', 'flags']);
+export const ORIGINAL_COLOR_CATEGORIES = new Set<IconCategoryConfig['value']>(['flags']);
 
 export const COLORED_CATEGORIES = CATEGORIES.filter(({ value }) => !ORIGINAL_COLOR_CATEGORIES.has(value));

@@ -17,6 +17,7 @@ Object.entries(METADATA).forEach(([category, icons]) => {
   test.describe(`${category} icons visual snapshots`, () => {
     test(`${category} icons match snapshots`, async ({ page }) => {
       test.setTimeout(600_000);
+      expect(icons, `${category} category should include generated icons`).not.toHaveLength(0);
 
       await page.goto(getPlaygroundScenarioPath(visualScenarioId), { waitUntil: 'networkidle' });
       await expect(page.getByTestId('icon-visual-snapshots')).toBeVisible();

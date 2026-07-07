@@ -1,4 +1,3 @@
-export * from './icons/bank';
 export * from './icons/category';
 export * from './icons/communication';
 export * from './icons/documents';
