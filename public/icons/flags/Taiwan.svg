@@ -4,7 +4,7 @@
 			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
 		</filter>
 	</defs>
-	<mask id="mask_22" width="28.000000" height="20.000000" x="1.333328" y="4.000000" maskUnits="userSpaceOnUse">
+	<mask id="mask_588" width="28.000000" height="20.000000" x="1.333328" y="4.000000" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
 			<rect id="Mask" width="28.000000" height="20.000000" x="1.333328" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 			<rect id="Mask" width="28.000000" height="20.000000" x="1.333328" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
@@ -13,7 +13,7 @@
 	<rect id="Taiwan" width="28.000000" height="28.000000" x="1.333328" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="1.333328" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="1.333328" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-	<g mask="url(#mask_22)">
+	<g mask="url(#mask_588)">
 		<path id="Rectangle 2" d="M1.52588e-05 25.3333L30.6667 25.3333L30.6667 2.66663L1.52588e-05 2.66663L1.52588e-05 25.3333Z" fill="rgb(254,48,48)" fill-rule="evenodd" />
 		<path id="Rectangle 2" d="M30.6667 25.3333L30.6667 2.66663L1.52588e-05 2.66663L1.52588e-05 25.3333L30.6667 25.3333Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 		<path id="Rectangle 2" d="M1.52588e-05 14.6666L16 14.6666L16 2.66663L1.52588e-05 2.66663L1.52588e-05 14.6666Z" fill="rgb(9,9,182)" fill-rule="evenodd" />

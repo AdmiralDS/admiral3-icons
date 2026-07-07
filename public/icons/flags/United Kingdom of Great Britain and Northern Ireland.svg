@@ -4,7 +4,7 @@
 			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
 		</filter>
 	</defs>
-	<mask id="mask_151" width="28.000000" height="20.000000" x="4.171997" y="4.000000" maskUnits="userSpaceOnUse">
+	<mask id="mask_717" width="28.000000" height="20.000000" x="4.171997" y="4.000000" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
 			<rect id="Mask" width="28.000000" height="20.000000" x="4.171997" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 			<rect id="Mask" width="28.000000" height="20.000000" x="4.171997" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
@@ -13,7 +13,7 @@
 	<rect id="United Kingdom of Great Britain and Northern Ireland" width="28.000000" height="28.000000" x="4.171997" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="4.171997" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="4.171997" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-	<g mask="url(#mask_151)">
+	<g mask="url(#mask_717)">
 		<rect id="Mask Copy" width="28.000000" height="20.000000" x="4.171997" y="4.000000" fill="rgb(10,23,167)" />
 		<rect id="Mask Copy" width="28.000000" height="20.000000" x="4.171997" y="4.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 		<path id="Rectangle 2" d="M34.9457 23.7057L33.4545 25.9165L21.5054 17.8567L21.5054 25.3333L14.8387 25.3333L14.8387 17.8567L2.88956 25.9165L1.39838 23.7057L10.8458 17.3333L4.17203 17.3333L4.17203 10.6667L10.8458 10.6667L1.39838 4.29432L2.88956 2.08356L14.8387 10.1434L14.8387 2.66667L21.5054 2.66667L21.5054 10.1434L33.4545 2.08356L34.9457 4.29432L25.4983 10.6667L32.172 10.6667L32.172 17.3333L25.4983 17.3333L34.9457 23.7057Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
