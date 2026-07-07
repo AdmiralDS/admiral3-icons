@@ -27,7 +27,6 @@ inputZip/<category>/*.zip
 
 Категории должны быть синхронны между `inputZip`, `public/icons`, `build` и `src/icons`:
 
-- `bank`
 - `category`
 - `communication`
 - `documents`

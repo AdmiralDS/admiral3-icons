@@ -4,7 +4,7 @@ const fse = require('fs-extra');
 const { optimize } = require('svgo');
 
 const CURRENT_COLOR = 'currentColor';
-const ORIGINAL_COLOR_CATEGORIES = new Set(['bank', 'flags']);
+const ORIGINAL_COLOR_CATEGORIES = new Set(['flags']);
 
 const walkElements = (node, callback) => {
   if (!node || typeof node !== 'object') return;

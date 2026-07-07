@@ -36,7 +36,7 @@
     "storybook": "storybook dev -p 6006",
     "playground": "vite --config vite.playground.config.ts",
     "release": "standard-version",
-    "build": "npm run build-meta && vite build && tsc -p tsconfig.lib.json",
+    "build": "rm -rf dist && npm run build-meta && vite build && tsc -p tsconfig.lib.json",
     "build-meta": "node scripts/formatSvg.cjs && node scripts/createMetadata.js && node scripts/generate-svg-icon-exports.cjs",
     "storybook:build": "storybook build",
     "playground:build": "vite build --config vite.playground.config.ts",

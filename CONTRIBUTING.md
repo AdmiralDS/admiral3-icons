@@ -59,10 +59,6 @@ Location -> `inputZip/location`
 Redact -> `inputZip/redact`  
 Logo icons -> `inputZip/logo`
 
-### Page Banks
-
-Bank Icons -> `inputZip/bank`
-
 ### Page Flags
 
 Flags -> `inputZip/flags`
