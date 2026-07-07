@@ -48,7 +48,7 @@ const VisualItem = styled.article`
   width: 64px;
   height: 64px;
   padding: 12px;
-  background: var(--admiral-color-base-neutral-base1-rest);
+  background: var(--admiral-color-neutral-base-1-rest);
 `;
 
 const VisualSvg = styled.div`
@@ -68,7 +68,7 @@ const GalleryRoot = styled.section`
   width: 100%;
   min-width: 0;
   gap: 24px;
-  color: var(--admiral-color-text-neutral-text1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
 `;
 
 const GalleryHeader = styled.header`
@@ -84,7 +84,7 @@ const GalleryHeader = styled.header`
 
   p {
     margin: 0;
-    color: var(--admiral-color-text-neutral-text2-rest);
+    color: var(--admiral-color-neutral-text-2-rest);
     ${typography.textStyles.body.body2Long};
   }
 `;
@@ -102,9 +102,9 @@ const CategoryCard = styled.article`
   min-width: 0;
   gap: 12px;
   padding: 12px;
-  border: 1px solid var(--admiral-color-stroke-neutral-subtle-rest);
+  border: 1px solid var(--admiral-color-neutral-stroke-subtle-rest);
   border-radius: var(--admiral-radius-by-base-8-medium);
-  background: var(--admiral-color-base-neutral-base1-rest);
+  background: var(--admiral-color-neutral-base-1-rest);
 
   h3 {
     min-width: 0;
@@ -117,7 +117,7 @@ const CategoryCard = styled.article`
 
   span {
     flex-shrink: 0;
-    color: var(--admiral-color-text-neutral-text2-rest);
+    color: var(--admiral-color-neutral-text-2-rest);
     ${typography.textStyles.body.body2Long};
   }
 `;
@@ -135,9 +135,9 @@ const IconPreviewCard = styled.article`
   min-width: 0;
   gap: 12px;
   padding: 12px;
-  border: 1px solid var(--admiral-color-stroke-neutral-subtle-rest);
+  border: 1px solid var(--admiral-color-neutral-stroke-subtle-rest);
   border-radius: var(--admiral-radius-by-base-8-medium);
-  background: var(--admiral-color-base-neutral-base1-rest);
+  background: var(--admiral-color-neutral-base-1-rest);
 `;
 
 const IconPreviewSvg = styled.div`
@@ -145,9 +145,9 @@ const IconPreviewSvg = styled.div`
   place-items: center;
   width: 48px;
   height: 48px;
-  color: var(--admiral-color-text-neutral-text2-rest);
+  color: var(--admiral-color-neutral-text-2-rest);
   border-radius: var(--admiral-radius-by-base-8-medium);
-  background: var(--admiral-color-base-neutral-base2-rest);
+  background: var(--admiral-color-neutral-base-2-rest);
 
   svg {
     display: block;
@@ -174,14 +174,14 @@ const IconPreviewMeta = styled.div`
   }
 
   span {
-    color: var(--admiral-color-text-neutral-text2-rest);
+    color: var(--admiral-color-neutral-text-2-rest);
     ${typography.textStyles.caption.caption1};
   }
 `;
 
 const EmptyState = styled.p`
   margin: 0;
-  color: var(--admiral-color-text-neutral-text2-rest);
+  color: var(--admiral-color-neutral-text-2-rest);
   ${typography.textStyles.body.body2Long};
 `;
 

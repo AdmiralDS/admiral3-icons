@@ -9,34 +9,34 @@ export const Page = styled.div`
   min-width: 0;
   min-height: 100vh;
   padding: 32px;
-  background: var(--admiral-color-base-neutral-base1-rest);
-  color: var(--admiral-color-text-neutral-text1-rest);
+  background: var(--admiral-color-neutral-base-1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
   font-family: ${typography.primitives.fontFamily.primary};
 `;
 
 export const Title = styled.div`
   max-width: 980px;
   margin: 0 0 24px;
-  color: var(--admiral-color-text-neutral-text1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
   ${typography.textStyles.header.h5};
 `;
 
 export const Text = styled.div`
   max-width: 980px;
-  color: var(--admiral-color-text-neutral-text1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
   ${typography.textStyles.body.body2Long};
 
   a {
-    color: var(--admiral-color-text-primary-link-rest);
+    color: var(--admiral-color-primary-text-link-rest);
 
     &:hover {
-      color: var(--admiral-color-text-primary-link-hover);
+      color: var(--admiral-color-primary-text-link-hover);
     }
   }
 `;
 
 export const Code = styled.code`
-  color: var(--admiral-color-text-neutral-text1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
   ${typography.textStyles.monospace.mono2};
 `;
 
@@ -46,10 +46,10 @@ export const Panel = styled.pre`
   margin: 16px 0;
   padding: 20px;
   overflow-x: auto;
-  color: var(--admiral-color-text-neutral-text1-rest);
-  border: 1px dashed var(--admiral-color-stroke-neutral-stroke1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
+  border: 1px dashed var(--admiral-color-neutral-stroke-1-rest);
   border-radius: var(--admiral-radius-by-base-4-medium);
-  background: var(--admiral-color-base-neutral-base1-rest);
+  background: var(--admiral-color-neutral-base-1-rest);
   ${typography.textStyles.monospace.mono2};
 `;
 
@@ -59,7 +59,7 @@ const CategoryWrapper = styled.section`
 
 const CategoryTitle = styled.h2`
   margin: 0 0 20px;
-  color: var(--admiral-color-text-neutral-text1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
   ${typography.textStyles.header.h5};
 `;
 
@@ -70,7 +70,7 @@ const IconsWrapper = styled.div`
   gap: 8px;
   padding: 32px 0;
   border-radius: var(--admiral-radius-by-base-8-medium);
-  background: var(--admiral-color-base-neutral-base1-rest);
+  background: var(--admiral-color-neutral-base-1-rest);
 
   svg {
     flex-shrink: 0;
@@ -89,7 +89,7 @@ export const IconCardContainer = styled.div`
 
 export const IconPreview = styled.span<{ $preserveColors?: boolean }>`
   ${({ $preserveColors }) =>
-    !$preserveColors && 'color: var(--story-icon-fill, var(--admiral-color-text-neutral-text2-rest));'}
+    !$preserveColors && 'color: var(--story-icon-fill, var(--admiral-color-neutral-text-2-rest));'}
 `;
 
 export const IconButton = styled.button`
@@ -99,19 +99,19 @@ export const IconButton = styled.button`
   width: 24px;
   height: 24px;
   padding: 0;
-  color: var(--admiral-color-text-neutral-text1-rest);
+  color: var(--admiral-color-neutral-text-1-rest);
   cursor: pointer;
   border: 0;
   border-radius: var(--admiral-radius-by-base-4-medium);
-  background: var(--admiral-color-base-neutral-invisible-rest);
+  background: var(--admiral-color-neutral-base-invisible-rest);
 
   &:hover {
-    background: var(--admiral-color-base-neutral-invisible-hover);
+    background: var(--admiral-color-neutral-base-invisible-hover);
   }
 `;
 
 const ColoredIconsWrapper = styled(IconsWrapper)`
-  --story-icon-fill: var(--admiral-color-stroke-primary-stroke1-rest);
+  --story-icon-fill: var(--admiral-color-primary-stroke-1-rest);
 `;
 
 export const IconName = styled.div`
@@ -120,7 +120,7 @@ export const IconName = styled.div`
   justify-content: center;
   width: 100%;
   gap: 8px;
-  color: var(--admiral-color-text-neutral-text2-rest);
+  color: var(--admiral-color-neutral-text-2-rest);
   ${typography.textStyles.caption.caption1};
   text-align: center;
 `;
