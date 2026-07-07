@@ -1,12 +1,13 @@
 import { StrictMode, useState } from 'react';
 
-import { themes, themeModes, typography, type ThemeMode } from '@admiral-ds/admiral3-tokens';
+import { themes, themeModes, type ThemeMode } from '@admiral-ds/admiral3-tokens';
 import { FontsSourceCodePro, FontsVTBGroup } from '@admiral-ds/admiral3-tokens/fonts';
 import { createRoot } from 'react-dom/client';
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import { playgroundScenarios } from './scenarios';
 import '@admiral-ds/admiral3-tokens/css';
+import './styles.css';
 
 const rootElement = document.getElementById('root');
 
@@ -34,162 +35,13 @@ const storeThemeMode = (mode: ThemeMode) => {
   try {
     window.localStorage.setItem(playgroundThemeStorageKey, mode);
   } catch {
-    // Keep the playground usable in restricted browser contexts.
+    // Ignore storage errors so the playground still works in restricted browser contexts.
   }
 };
 
 if (!scenario) {
   throw new Error(`Unknown playground scenario: ${scenarioId}`);
 }
-
-const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    min-height: 100dvh;
-    color: var(--admiral-color-neutral-text-1-rest);
-    background: var(--admiral-color-neutral-base-1-rest);
-    font-family: ${typography.primitives.fontFamily.primary};
-  }
-
-  #root {
-    min-height: 100dvh;
-  }
-`;
-
-const PlaygroundShell = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  min-height: 100dvh;
-  padding: 12px;
-  color: var(--admiral-color-neutral-text-1-rest);
-  background: var(--admiral-color-neutral-base-1-rest);
-`;
-
-const PlaygroundHeader = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: fit-content;
-  gap: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--admiral-color-neutral-stroke-subtle-rest);
-`;
-
-const PageTitle = styled.h1`
-  margin: 0;
-  ${typography.textStyles.header.h5};
-`;
-
-const HeaderControls = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 12px;
-`;
-
-const ThemeLabel = styled.label`
-  color: var(--admiral-color-neutral-text-2-rest);
-  ${typography.textStyles.body.body2Long};
-`;
-
-const ThemeSelect = styled.select`
-  min-height: 32px;
-  padding: 0 8px;
-  color: var(--admiral-color-neutral-text-1-rest);
-  border: 1px solid var(--admiral-color-neutral-stroke-1-rest);
-  border-radius: var(--admiral-radius-by-base-4-medium);
-  background: var(--admiral-color-neutral-base-1-rest);
-  ${typography.textStyles.body.body2Long};
-`;
-
-const PlaygroundLayout = styled.section<{ $isSidebarOpen: boolean }>`
-  display: grid;
-  grid-template-columns: ${({ $isSidebarOpen }) => ($isSidebarOpen ? '250px minmax(0, 1fr)' : 'minmax(0, 1fr)')};
-  align-items: start;
-  width: 100%;
-  min-height: 100dvh;
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const PlaygroundSidebar = styled.aside`
-  align-self: start;
-  height: 100%;
-  padding: 4px;
-  border-right: 1px solid var(--admiral-color-neutral-stroke-subtle-rest);
-
-  @media (max-width: 900px) {
-    padding-right: 0;
-    padding-bottom: 20px;
-    border-right: 0;
-    border-bottom: 1px solid var(--admiral-color-neutral-stroke-subtle-rest);
-  }
-`;
-
-const PlaygroundContent = styled.section`
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  gap: 8px;
-  padding: 8px;
-
-  @media (max-width: 900px) {
-    padding-left: 0;
-  }
-`;
-
-const PlaygroundToggle = styled.button`
-  padding: 0;
-  color: var(--admiral-color-neutral-text-1-rest);
-  text-decoration: underline;
-  cursor: pointer;
-  border: 0;
-  background: var(--admiral-color-neutral-base-1-rest);
-  ${typography.textStyles.body.body2Long};
-
-  &:hover {
-    color: var(--admiral-color-primary-text-1-hover);
-  }
-`;
-
-const PlaygroundNav = styled.nav`
-  display: grid;
-  gap: 8px;
-`;
-
-const PlaygroundNavLink = styled.a`
-  display: block;
-  overflow: hidden;
-  padding: 2px 0;
-  color: var(--admiral-color-neutral-text-1-rest);
-  text-overflow: ellipsis;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: color 160ms ease;
-  ${typography.textStyles.body.body2Long};
-
-  &:hover,
-  &[aria-current='page'] {
-    color: var(--admiral-color-primary-text-1-rest);
-  }
-`;
-
-const PlaygroundPreview = styled.div`
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  min-height: 100dvh;
-  padding: 0;
-`;
 
 document.title = `${scenario.title} | Admiral Internal Playground`;
 
@@ -204,13 +56,15 @@ export const PlaygroundApp = () => {
 
   return (
     <ThemeProvider theme={themes[themeMode]}>
-      <GlobalStyle />
-      <PlaygroundShell className="playground-shell" data-admiral-theme={cssThemeMode(themeMode)}>
-        <PlaygroundHeader>
-          <PageTitle>Internal E2E Playground</PageTitle>
-          <HeaderControls>
-            <ThemeLabel htmlFor="playground-theme">Theme</ThemeLabel>
-            <ThemeSelect
+      <main className="playground-shell" data-admiral-theme={cssThemeMode(themeMode)}>
+        <header className="playground-header">
+          <h1 className="playground-page-title">Internal E2E Playground</h1>
+          <div className="playground-header-controls">
+            <label className="playground-theme-label" htmlFor="playground-theme">
+              Theme
+            </label>
+            <select
+              className="playground-theme-select"
               id="playground-theme"
               onChange={(event) => handleThemeModeChange(event.target.value as ThemeMode)}
               value={themeMode}
@@ -220,41 +74,42 @@ export const PlaygroundApp = () => {
                   {mode}
                 </option>
               ))}
-            </ThemeSelect>
-            <PlaygroundToggle onClick={() => setIsSidebarOpen((value) => !value)} type="button">
+            </select>
+            <button className="playground-toggle" onClick={() => setIsSidebarOpen((value) => !value)} type="button">
               {isSidebarOpen ? 'Hide menu' : 'Show menu'}
-            </PlaygroundToggle>
-          </HeaderControls>
-        </PlaygroundHeader>
-        <PlaygroundLayout $isSidebarOpen={isSidebarOpen}>
+            </button>
+          </div>
+        </header>
+        <section className={`playground-layout${isSidebarOpen ? '' : ' playground-layout_sidebar-hidden'}`}>
           {isSidebarOpen ? (
-            <PlaygroundSidebar>
-              <PlaygroundNav aria-label="Playground scenarios">
+            <aside className="playground-sidebar">
+              <nav aria-label="Playground scenarios" className="playground-nav">
                 {playgroundScenarios.map((item) => {
                   const isActive = item.id === scenario.id;
 
                   return (
-                    <PlaygroundNavLink
+                    <a
                       key={item.id}
                       aria-current={isActive ? 'page' : undefined}
+                      className={`playground-nav-link${isActive ? ' playground-nav-link_active' : ''}`}
                       href={`/?scenario=${encodeURIComponent(item.id)}`}
                       title={item.title}
                     >
                       {item.title}
-                    </PlaygroundNavLink>
+                    </a>
                   );
                 })}
-              </PlaygroundNav>
-            </PlaygroundSidebar>
+              </nav>
+            </aside>
           ) : null}
-          <PlaygroundContent>
+          <section className="playground-content">
             <div>
               {scenario.title} ({scenario.id})
             </div>
-            <PlaygroundPreview>{scenario.render()}</PlaygroundPreview>
-          </PlaygroundContent>
-        </PlaygroundLayout>
-      </PlaygroundShell>
+            <div className="playground-preview">{scenario.render()}</div>
+          </section>
+        </section>
+      </main>
     </ThemeProvider>
   );
 };
