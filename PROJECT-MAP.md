@@ -10,8 +10,8 @@
 ## Основной поток данных
 
 ```text
-inputZip/<category>/*.zip
-  -> scripts/update_icons_from_zip.py
+inputZip/*.zip
+  -> scripts/update_icons_from_single_zip.py
   -> public/icons/<category>/*.svg
   -> scripts/formatSvg.cjs
   -> build/<category>/*.svg
@@ -23,9 +23,18 @@ inputZip/<category>/*.zip
   -> dist/*.js + dist/*.d.ts
 ```
 
+Fallback-поток для ручного экспорта по категориям:
+
+```text
+inputZipManual/<category>/*.zip
+  -> scripts/update_icons_from_zip.py
+  -> public/icons/<category>/*.svg
+  -> npm run build-meta
+```
+
 ## Категории иконок
 
-Категории должны быть синхронны между `inputZip`, `public/icons`, `build` и `src/icons`:
+`icon-categories.json` - источник правды для категорий, Storybook labels и названий фреймов Pixso. Скрипты синхронизируют `public/icons`, `build`, `src/iconCategoryConfig.ts`, `src/icons`, `src/index.ts` и `src/flags.ts` с этим конфигом.
 
 - `category`
 - `communication`
@@ -43,8 +52,10 @@ inputZip/<category>/*.zip
 
 ## Каталоги
 
-- `inputZip/<category>` - временные папки для ZIP-архивов из Pixso. После `npm run icons:update` скрипт очищает содержимое категории, оставляя `.gitkeep`.
-- `public/icons/<category>` - исходные SVG по категориям. Это источник для оптимизации, не часть публичного API пакета.
+- `inputZip` - временная папка для одного ZIP из Pixso Icons Plugin. После `npm run icons:update` скрипт очищает содержимое, оставляя `.gitkeep`.
+- `inputZipManual/<category>` - fallback-папки для ручных ZIP-архивов по категориям. После `npm run icons:update:manual` скрипт очищает содержимое категории, оставляя `.gitkeep`.
+- `.tmp/pixso-plugin-icons` - временная папка распаковки Pixso Plugin ZIP. Генерируется и удаляется скриптом.
+- `public/icons/<category>` - исходные SVG по категориям. Синхронизируется скриптами из Pixso ZIP, не часть публичного API пакета.
 - `build/<category>` - оптимизированные SVG после SVGO. Генерируется из `public/icons`, используется для сборки React-компонентов и не является публичным API пакета.
 - `src/icons/<category>.ts` - сгенерированные React-экспорты категории через `vite-plugin-svgr`.
 - `src/index.ts` - root entry point, реэкспортирует все `src/icons/*`, кроме `flags`.
@@ -53,6 +64,7 @@ inputZip/<category>/*.zip
 - `playground/` - internal Vite-приложение для browser/runtime-проверок.
 - `playground/scenarios/` - сценарии playground. `index.ts` собирает реестр, `icon-gallery.tsx` показывает данные из `metadata.json`.
 - `tests/e2e/` - Playwright e2e/smoke-тесты playground.
+- `tests/visual/` - Playwright visual snapshot-тесты и эталонные PNG-снимки.
 - `.storybook/` - конфигурация Storybook, темы и preview-настройки.
 - `.github/workflows/` - CI и npm release workflows.
 - `scripts/` - генераторы, проверка package exports и утилиты обновления иконок.
@@ -63,12 +75,16 @@ inputZip/<category>/*.zip
 - `package.json` - package exports, npm scripts, peer dependencies и список файлов для публикации.
 - `README.md` - краткая пользовательская документация пакета.
 - `CONTRIBUTING.md` - процесс обновления иконок из Pixso, проверки, PR и релиза.
+- `icon-categories.json` - источник правды для категорий, Storybook labels и Pixso frame names.
+- `src/iconCategoryConfig.ts` - сгенерированный TypeScript-конфиг категорий для UI/Storybook.
 - `metadata.json` - сгенерированная metadata по всем категориям: имя, путь, SVG и тип `outline`/`solid`.
 - `flags-metadata.json` - сгенерированная metadata флагов: path, ISO-код, английское и русское название страны.
-- `commitMessages.txt` - создается `scripts/update_icons_from_zip.py` после обновления ZIP; содержит шаблоны сообщений для добавленных и удаленных иконок.
+- `commitMessages.txt` - создается скриптами обновления после обновления ZIP; содержит шаблоны сообщений для добавленных и удаленных иконок.
 - `vite.config.ts` - library build для `src/index.ts` и `src/flags.ts`.
 - `vite.playground.config.ts` - сборка internal playground в `dist-playground`.
 - `playwright.config.ts` - e2e-конфиг; запускает `npm run playground:serve` на `http://localhost:4173`.
+- `playwright.visual.config.ts` - visual snapshot-конфиг; запускает Chromium и хранит снимки в `tests/visual`.
+- `tests/TESTING_README.md` - правила добавления и запуска e2e и visual snapshot-тестов.
 - `eslint.config.js` - ESLint flat config.
 - `tsconfig.json` - project references для typecheck.
 - `tsconfig.lib.json` - генерация деклараций для library build.
@@ -80,12 +96,15 @@ inputZip/<category>/*.zip
 
 ## Scripts
 
-- `npm run icons:update` - распаковывает ZIP из `inputZip`, обновляет `public/icons`, генерирует `commitMessages.txt`, затем запускает `build-meta`.
+- `npm run icons:update` - распаковывает один Pixso Plugin ZIP из `inputZip`, валидирует категории, обновляет `public/icons`, генерирует `commitMessages.txt`, затем запускает `build-meta`.
+- `npm run icons:update:manual` - fallback: распаковывает ручные ZIP из `inputZipManual/<category>`, обновляет `public/icons`, генерирует `commitMessages.txt`, затем запускает `build-meta`.
 - `npm run build-meta` - оптимизирует SVG в `build`, пересобирает `metadata.json`, `flags-metadata.json` и TS-экспорты.
 - `npm run build` - запускает `build-meta`, Vite library build и генерацию `.d.ts`.
 - `npm run test:exports` - собирает пакет, устанавливает tarball во временный проект и проверяет публичные ESM exports.
 - `npm run test:e2e` - собирает пакет и playground, затем запускает Playwright.
 - `npm run test:e2e-ui` - то же, но в UI-режиме Playwright.
+- `npm run test:visual` - собирает пакет и playground, затем запускает visual snapshot-тесты.
+- `npm run test:visual:update` - пересобирает visual snapshot-эталоны.
 - `npm run playground` - локальный Vite dev server для playground.
 - `npm run playground:build` - production-сборка playground в `dist-playground`.
 - `npm run playground:serve` - статическая раздача `dist-playground` на порту `4173`.
@@ -93,21 +112,39 @@ inputZip/<category>/*.zip
 - `npm run storybook:build` - production-сборка Storybook.
 - `npm run check:full` - форматирование, lint, typecheck, package exports, e2e и visual snapshot-тесты.
 - `npm run check:fix` - автоформатирование и ESLint autofix.
+- `npm run dev` - локальный Vite dev server для library/dev-сборки.
 - `npm run pack:check` - dry-run npm tarball.
 - `npm run release` - генерация версии и changelog через `standard-version`.
 
 ## Скрипты генерации
 
+- `scripts/update_icons_from_single_zip.py`
+  - читает ровно один ZIP из `inputZip`;
+  - сверяет верхнеуровневые папки ZIP с `pixsoFrameName` из `icon-categories.json`;
+  - проверяет, что каждая категория содержит SVG после фильтрации;
+  - безопасно распаковывает ZIP во временную папку `.tmp/pixso-plugin-icons`;
+  - нормализует имена файлов;
+  - пропускает файлы, начинающиеся с `Rectangle`;
+  - полностью заменяет SVG в `public/icons/<category>`;
+  - удаляет из `public/icons` категории, которых больше нет в `icon-categories.json`;
+  - очищает `inputZip`;
+  - создает `commitMessages.txt` со списками добавленных и удаленных иконок.
 - `scripts/update_icons_from_zip.py`
-  - читает ZIP из `inputZip/<category>`;
+  - читает ручные ZIP из `inputZipManual/<category>`;
+  - сверяет папки `inputZipManual` с `value` из `icon-categories.json`;
   - распаковывает SVG;
   - нормализует имена файлов;
   - пропускает файлы, начинающиеся с `Rectangle`;
   - полностью заменяет SVG в `public/icons/<category>`;
-  - очищает временные файлы в `inputZip`;
+  - очищает временные файлы в `inputZipManual`;
   - создает `commitMessages.txt` со списками добавленных и удаленных иконок.
+- `scripts/icon-categories.cjs`
+  - читает и валидирует `icon-categories.json`;
+  - предоставляет общий список категорий для генераторов.
+- `scripts/sync-icon-category-config.cjs`
+  - генерирует `src/iconCategoryConfig.ts` из `icon-categories.json`.
 - `scripts/formatSvg.cjs`
-  - читает `public/icons`;
+  - читает категории из `icon-categories.json` и SVG из `public/icons`;
   - оптимизирует SVG через SVGO;
   - удаляет размеры, добавляет `focusable=false`, префиксует id;
   - удаляет служебные пустые path;
@@ -121,7 +158,7 @@ inputZip/<category>/*.zip
   - сопоставляет имена файлов со справочниками стран;
   - генерирует `flags-metadata.json`.
 - `scripts/generate-svg-icon-exports.cjs`
-  - читает `metadata.json`;
+  - читает категории из `icon-categories.json` и данные из `metadata.json`;
   - генерирует `src/icons/<category>.ts`;
   - генерирует `src/index.ts` без `flags`;
   - генерирует `src/flags.ts` для отдельного subpath.
@@ -157,6 +194,8 @@ Playground нужен для consumer-like runtime-проверок:
 
 Перед e2e пакет собирается как опубликованный entry point, затем собирается playground и поднимается статически.
 
+Visual snapshot-тесты используют тот же production-like playground, но запускаются отдельной командой и конфигом `playwright.visual.config.ts`. Эталоны лежат рядом со spec в `tests/visual/icon.test.ts-snapshots/`.
+
 ## Storybook
 
 Storybook используется как витрина и docs/a11y-слой:
@@ -189,14 +228,16 @@ Storybook не является runtime для e2e-тестов.
 - `dist`
 - `README.md`
 
-`LICENSE` и `package.json` добавляются npm автоматически.
+`LICENSE` и `package.json` добавляются npm автоматически. `package.json` также доступен через публичный export `@admiral-ds/admiral3-icons/package.json`.
 
-Исходники `src`, `build`, `scripts`, `playground`, `tests`, Storybook и CI-конфиги не входят в публикуемый пакет.
+Исходники `src`, `build`, `scripts`, `playground`, `tests`, Storybook, visual snapshots и CI-конфиги не входят в публикуемый пакет.
 
 ## Что редактировать вручную
 
-- При обновлении иконок вручную кладутся только ZIP-архивы в `inputZip/<category>`.
-- `public/icons`, `build`, `metadata.json`, `flags-metadata.json`, `src/icons`, `src/index.ts` и `src/flags.ts` должны обновляться через скрипты.
+- При обычном обновлении иконок вручную кладется только один Pixso Plugin ZIP в `inputZip`.
+- Для fallback-обновления вручную кладутся только ZIP-архивы в `inputZipManual/<category>`.
+- При изменении набора категорий вручную редактируется `icon-categories.json`.
+- `src/iconCategoryConfig.ts`, `public/icons`, `build`, `metadata.json`, `flags-metadata.json`, `src/icons`, `src/index.ts` и `src/flags.ts` должны обновляться через скрипты.
 - `dist` и `dist-playground` являются build-артефактами и не редактируются вручную.
 - При изменении package exports нужно обновлять `package.json`, сборку и `scripts/test-package-exports.cjs`.
 - При изменении runtime-сценариев нужно синхронизировать `playground/scenarios` и `tests/e2e`.
