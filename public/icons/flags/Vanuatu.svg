@@ -3,22 +3,22 @@
 		<filter id="pixso_custom_mask_type_alpha">
 			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
 		</filter>
-		<g id="pixso_custom_effect_52">
+		<g id="pixso_custom_effect_78">
 			<effect x="0.000000" y="0.000000" visibility="visible" fill="rgb(0,0,0)" fill-opacity="0.0599999987" effectType="dropShadow" showShadowBehind="1" stdDeviation="0" radius="0" />
 			<effect x="0.000000" y="1.000000" visibility="hidden" fill="rgb(255,216.88,100.278)" fill-opacity="1" effectType="innerShadow" showShadowBehind="1" stdDeviation="0" radius="0" />
 		</g>
-		<filter id="filter_52" width="28.000000" height="8.000000" x="1.333344" y="16.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_52)" color-interpolation-filters="sRGB">
+		<filter id="filter_78" width="28.000000" height="8.000000" x="1.333344" y="16.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_78)" color-interpolation-filters="sRGB">
 			<feFlood flood-opacity="0" result="BackgroundImageFix" />
 			<feOffset dx="0.000000" dy="0.000000" in="SourceAlpha" />
 			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0 " />
 			<feBlend result="effect_dropShadow_1" in2="BackgroundImageFix" mode="normal" />
 			<feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
 		</filter>
-		<g id="pixso_custom_effect_53">
+		<g id="pixso_custom_effect_79">
 			<effect x="0.000000" y="0.000000" visibility="visible" fill="rgb(0,0,0)" fill-opacity="0.0599999987" effectType="dropShadow" showShadowBehind="1" stdDeviation="0" radius="0" />
 			<effect x="0.000000" y="1.000000" visibility="hidden" fill="rgb(255,216.88,100.278)" fill-opacity="1" effectType="innerShadow" showShadowBehind="1" stdDeviation="0" radius="0" />
 		</g>
-		<filter id="filter_53" width="28.000000" height="8.000000" x="1.333344" y="4.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_53)" color-interpolation-filters="sRGB">
+		<filter id="filter_79" width="28.000000" height="8.000000" x="1.333344" y="4.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_79)" color-interpolation-filters="sRGB">
 			<feFlood flood-opacity="0" result="BackgroundImageFix" />
 			<feOffset dx="0.000000" dy="0.000000" in="SourceAlpha" />
 			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0 " />
@@ -26,7 +26,7 @@
 			<feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
 		</filter>
 	</defs>
-	<mask id="mask_579" width="28.000000" height="20.000000" x="1.333344" y="4.000000" maskUnits="userSpaceOnUse">
+	<mask id="mask_862" width="28.000000" height="20.000000" x="1.333344" y="4.000000" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
 			<rect id="Mask" width="28.000000" height="20.000000" x="1.333344" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 			<rect id="Mask" width="28.000000" height="20.000000" x="1.333344" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
@@ -35,12 +35,12 @@
 	<rect id="Vanuatu" width="28.000000" height="28.000000" x="1.333344" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="1.333344" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="1.333344" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-	<g mask="url(#mask_579)">
-		<g filter="url(#filter_52)">
+	<g mask="url(#mask_862)">
+		<g filter="url(#filter_78)">
 			<path id="Rectangle 2" d="M1.33334 24L29.3333 24L29.3333 16L1.33334 16L1.33334 24Z" fill="rgb(0,149,67)" fill-rule="evenodd" />
 			<path id="Rectangle 2" d="M29.3333 24L29.3333 16L1.33334 16L1.33334 24L29.3333 24Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 		</g>
-		<g filter="url(#filter_53)">
+		<g filter="url(#filter_79)">
 			<path id="Rectangle 2" d="M1.33334 12L29.3333 12L29.3333 4L1.33334 4L1.33334 12Z" fill="rgb(210,16,52)" fill-rule="evenodd" />
 			<path id="Rectangle 2" d="M29.3333 12L29.3333 4L1.33334 4L1.33334 12L29.3333 12Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 		</g>

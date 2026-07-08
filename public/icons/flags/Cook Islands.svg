@@ -1,7 +1,7 @@
 <svg viewBox="0 0 29.8022 28" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.802170" height="28.000000" fill="none" customFrame="#000000">
-	<mask id="mask_817" width="6.666666" height="9.333332" x="19.135544" y="9.333313" maskUnits="userSpaceOnUse">
+	<mask id="mask_1100" width="6.666666" height="9.333332" x="19.135544" y="9.333313" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
-			<path id="Mask" d="M19.1355 14C19.1355 12 19.1355 9.33331 19.1355 9.33331L25.8022 9.33331C25.8022 9.33331 25.8022 12 25.8022 14C25.8022 17.3333 22.4689 18.6666 22.4689 18.6666C22.4689 18.6666 19.1355 17.3333 19.1355 14Z" fill="url(#paint_linear_158)" fill-rule="evenodd" />
+			<path id="Mask" d="M19.1355 14C19.1355 12 19.1355 9.33331 19.1355 9.33331L25.8022 9.33331C25.8022 9.33331 25.8022 12 25.8022 14C25.8022 17.3333 22.4689 18.6666 22.4689 18.6666C22.4689 18.6666 19.1355 17.3333 19.1355 14Z" fill="url(#paint_linear_213)" fill-rule="evenodd" />
 			<path id="Mask" d="M19.1355 9.33331L25.8022 9.33331C25.8022 9.33331 25.8022 12 25.8022 14C25.8022 17.3333 22.4689 18.6666 22.4689 18.6666C22.4689 18.6666 19.1355 17.3333 19.1355 14C19.1355 12 19.1355 9.33331 19.1355 9.33331Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 		</g>
 	</mask>
@@ -9,16 +9,16 @@
 		<filter id="pixso_custom_mask_type_alpha">
 			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
 		</filter>
-		<linearGradient id="paint_linear_157" x1="19.1355438" x2="19.1355438" y1="9.33331299" y2="18.6666451" gradientUnits="userSpaceOnUse">
+		<linearGradient id="paint_linear_212" x1="19.1355438" x2="19.1355438" y1="9.33331299" y2="18.6666451" gradientUnits="userSpaceOnUse">
 			<stop stop-color="rgb(255,255,255)" offset="0" stop-opacity="1" />
 			<stop stop-color="rgb(239.7,239.7,239.7)" offset="1" stop-opacity="1" />
 		</linearGradient>
-		<linearGradient id="paint_linear_158" x1="19.1355438" x2="19.1355438" y1="9.33331299" y2="18.6666451" gradientUnits="userSpaceOnUse">
+		<linearGradient id="paint_linear_213" x1="19.1355438" x2="19.1355438" y1="9.33331299" y2="18.6666451" gradientUnits="userSpaceOnUse">
 			<stop stop-color="rgb(255,255,255)" offset="0" stop-opacity="1" />
 			<stop stop-color="rgb(239.7,239.7,239.7)" offset="1" stop-opacity="1" />
 		</linearGradient>
 	</defs>
-	<mask id="mask_816" width="28.000000" height="20.000000" x="1.802170" y="4.000000" maskUnits="userSpaceOnUse">
+	<mask id="mask_1099" width="28.000000" height="20.000000" x="1.802170" y="4.000000" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
 			<rect id="Mask" width="28.000000" height="20.000000" x="1.802170" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 			<rect id="Mask" width="28.000000" height="20.000000" x="1.802170" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
@@ -27,15 +27,15 @@
 	<rect id="Cook Islands" width="28.000000" height="28.000000" x="1.802170" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="1.802170" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="1.802170" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-	<g mask="url(#mask_816)">
+	<g mask="url(#mask_1099)">
 		<rect id="Mask Copy" width="28.000000" height="20.000000" x="1.802170" y="4.000000" fill="rgb(6,35,101)" />
 		<rect id="Mask Copy" width="28.000000" height="20.000000" x="1.802170" y="4.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 		<path id="Oval 180" d="M22.4688 10.6667C23.5734 10.6667 24.4688 10.0697 24.4688 9.33333C24.4688 8.59695 23.5734 8 22.4688 8C21.3642 8 20.4688 8.59695 20.4688 9.33333C20.4688 10.0697 21.3642 10.6667 22.4688 10.6667Z" opacity="0" fill="rgb(250,208,81)" fill-rule="evenodd" />
 		<path id="Oval 180" d="M24.4688 9.33333C24.4688 8.59695 23.5734 8 22.4688 8C21.3642 8 20.4688 8.59695 20.4688 9.33333C20.4688 10.0697 21.3642 10.6667 22.4688 10.6667C23.5734 10.6667 24.4688 10.0697 24.4688 9.33333Z" opacity="0" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 		<g id="Rectangle 1105" opacity="0">
-			<path id="Mask" d="M19.1355 14C19.1355 12 19.1355 9.33331 19.1355 9.33331L25.8022 9.33331C25.8022 9.33331 25.8022 12 25.8022 14C25.8022 17.3333 22.4689 18.6666 22.4689 18.6666C22.4689 18.6666 19.1355 17.3333 19.1355 14Z" fill="url(#paint_linear_157)" fill-rule="evenodd" />
+			<path id="Mask" d="M19.1355 14C19.1355 12 19.1355 9.33331 19.1355 9.33331L25.8022 9.33331C25.8022 9.33331 25.8022 12 25.8022 14C25.8022 17.3333 22.4689 18.6666 22.4689 18.6666C22.4689 18.6666 19.1355 17.3333 19.1355 14Z" fill="url(#paint_linear_212)" fill-rule="evenodd" />
 			<path id="Mask" d="M19.1355 9.33331L25.8022 9.33331C25.8022 9.33331 25.8022 12 25.8022 14C25.8022 17.3333 22.4689 18.6666 22.4689 18.6666C22.4689 18.6666 19.1355 17.3333 19.1355 14C19.1355 12 19.1355 9.33331 19.1355 9.33331Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-			<g mask="url(#mask_817)">
+			<g mask="url(#mask_1100)">
 				<path id="Rectangle 1106" d="M19.1355 9.33331L25.8022 9.33331L25.8022 10.6666L23.1355 10.6666L21.8022 10.6666L19.1355 10.6666L19.1355 9.33331Z" fill="rgb(207,20,44)" fill-rule="evenodd" />
 				<path id="Rectangle 1106" d="M25.8022 9.33331L25.8022 10.6666L23.1355 10.6666L21.8022 10.6666L19.1355 10.6666L19.1355 9.33331L25.8022 9.33331Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 				<path id="Rectangle 1106" d="M25.8022 11.9999L19.1355 11.9999L19.1355 13.3333L25.8022 13.3333L25.8022 11.9999ZM19.1355 14.6666L25.8022 14.6666L25.8022 15.9999L19.1355 15.9999L19.1355 14.6666ZM19.1355 17.3333L25.8022 17.3333L25.8022 18.6666L19.1355 18.6666L19.1355 17.3333Z" fill="rgb(18,95,186)" fill-rule="evenodd" />

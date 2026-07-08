@@ -4,7 +4,7 @@
 			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
 		</filter>
 	</defs>
-	<mask id="mask_631" width="28.000000" height="20.000000" x="0.000000" y="4.000000" maskUnits="userSpaceOnUse">
+	<mask id="mask_914" width="28.000000" height="20.000000" x="0.000000" y="4.000000" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
 			<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 			<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
@@ -13,7 +13,7 @@
 	<rect id="Saudi Arabia" width="28.000000" height="28.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-	<g mask="url(#mask_631)">
+	<g mask="url(#mask_914)">
 		<rect id="Mask Copy" width="28.000000" height="20.000000" x="0.000000" y="4.000000" fill="rgb(18,140,75)" />
 		<rect id="Mask Copy" width="28.000000" height="20.000000" x="0.000000" y="4.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 		<path id="Rectangle 455" d="M6.66663 16L17.3333 16L17.3333 15.0787C17.3333 14.5831 17.8548 14.2608 18.2981 14.4824L18.6666 14.6667L18.6666 16L20.6666 16C21.0348 16 21.3333 16.2985 21.3333 16.6667L21.3333 17.3334C21.3333 18.0697 20.7363 18.6667 20 18.6667L18 18.6667C17.6318 18.6667 17.3333 18.3682 17.3333 18L17.3333 17.3334L8.2761 17.3334C8.09929 17.3334 7.92972 17.2631 7.8047 17.1381L6.66663 16Z" fill="rgb(255,255,255)" fill-rule="evenodd" />

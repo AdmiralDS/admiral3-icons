@@ -4,7 +4,7 @@
 			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
 		</filter>
 	</defs>
-	<mask id="mask_656" width="28.000000" height="20.000000" x="1.802185" y="4.000000" maskUnits="userSpaceOnUse">
+	<mask id="mask_939" width="28.000000" height="20.000000" x="1.802185" y="4.000000" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
 			<rect id="Mask" width="28.000000" height="20.000000" x="1.802185" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 			<rect id="Mask" width="28.000000" height="20.000000" x="1.802185" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
@@ -13,7 +13,7 @@
 	<rect id="New Zealand" width="28.000000" height="28.000000" x="1.802185" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="1.802185" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="1.802185" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-	<g mask="url(#mask_656)">
+	<g mask="url(#mask_939)">
 		<rect id="Mask Copy" width="28.000000" height="20.000000" x="1.802185" y="4.000000" fill="rgb(10,23,167)" />
 		<rect id="Mask Copy" width="28.000000" height="20.000000" x="1.802185" y="4.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 		<path id="Rectangle 36" d="M6.46885 8L1.80219 4L2.46885 4L7.13552 7.33333L8.46885 7.33333L13.8022 4L13.8022 4.49513C13.8022 4.60278 13.7502 4.7038 13.6626 4.76637L9.13552 8L9.13552 9.33333L13.3497 12.9455C13.5051 13.0787 13.4109 13.3333 13.2062 13.3333L13.2062 13.3333C13.1602 13.3333 13.1154 13.319 13.078 13.2923L8.46885 10L7.13552 10L1.80219 13.3333L1.80219 12.6667L6.46885 9.33333L6.46885 8Z" fill="rgb(255,46,59)" fill-rule="evenodd" />
