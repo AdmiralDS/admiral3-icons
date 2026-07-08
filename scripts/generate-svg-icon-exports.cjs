@@ -3,12 +3,13 @@
 const path = require('path');
 const fse = require('fs-extra');
 const metadata = require('../metadata.json');
+const { getCategoryValues } = require('./icon-categories.cjs');
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-const CATEGORIES = Object.keys(metadata);
+const CATEGORIES = getCategoryValues();
 const ROOT_CATEGORIES = CATEGORIES.filter((category) => category !== 'flags');
 
 const ensureFileExists = (filePath) => {
@@ -18,12 +19,19 @@ const ensureFileExists = (filePath) => {
 };
 
 const generateReactExportFile = () => {
+  const categoryFileNames = new Set(CATEGORIES.map((category) => `${category}.ts`));
+
+  fse
+    .readdirSync(path.resolve('src/icons'), { withFileTypes: true })
+    .filter((entry) => entry.isFile() && path.extname(entry.name) === '.ts' && !categoryFileNames.has(entry.name))
+    .forEach((entry) => fse.removeSync(path.resolve('src/icons', entry.name)));
+
   CATEGORIES.forEach((category) => {
     const exportFileName = path.resolve('src/icons', `${category}.ts`);
 
     ensureFileExists(exportFileName);
 
-    const exportFileContent = metadata[category]
+    const exportFileContent = (metadata[category] ?? [])
       .map(
         ({ name, path }) =>
           `export { default as ${capitalizeFirstLetter(category)}${name} } from '../../${path}?react';`,

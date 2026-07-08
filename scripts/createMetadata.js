@@ -4,6 +4,7 @@ import * as path from 'path';
 import { createFlagsMeta } from './createFlagsMetadata.js';
 
 const BUILD_DIR = 'build';
+const CATEGORY_CONFIG_FILE = 'icon-categories.json';
 const METADATA_FILE = 'metadata.json';
 
 (function () {
@@ -11,7 +12,7 @@ const METADATA_FILE = 'metadata.json';
 
   let metadata = {};
 
-  const categories = fse.readdirSync(BUILD_DIR);
+  const categories = fse.readJSONSync(CATEGORY_CONFIG_FILE).map(({ value }) => value);
   categories.forEach((categoryName) => {
     const categoryMeta = createCategoryMeta(categoryName);
     metadata = { ...metadata, ...categoryMeta };

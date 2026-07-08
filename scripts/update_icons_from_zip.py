@@ -1,5 +1,6 @@
 import os
 import re
+import json
 import shutil
 import sys
 import zipfile
@@ -8,11 +9,38 @@ from pathlib import Path
 repo_root = Path(__file__).resolve().parent.parent
 source_path = repo_root / "inputZipManual"
 dst_root_path = repo_root / "public" / "icons"
+category_config_path = repo_root / "icon-categories.json"
 
 if not source_path.is_dir():
     sys.exit(f"source path is not a directory: {source_path}")
 if not dst_root_path.is_dir():
     sys.exit(f"destination path is not a directory: {dst_root_path}")
+
+
+def read_category_config():
+    with category_config_path.open(encoding="utf-8") as config_file:
+        categories = json.load(config_file)
+
+    if not isinstance(categories, list):
+        sys.exit("icon-categories.json must contain an array.")
+
+    values = []
+    for index, category in enumerate(categories):
+        value = category.get("value") if isinstance(category, dict) else None
+        if not isinstance(value, str) or not value.strip():
+            sys.exit(f"icon-categories.json item {index} is missing value.")
+        values.append(value)
+
+    return values
+
+
+def fail_category_mismatch(source, unexpected, missing):
+    lines = [
+        f"Icon category list changed in {source}. Update icon-categories.json first.",
+        f"Unexpected categories: {', '.join(unexpected) if unexpected else 'none'}",
+        f"Missing categories: {', '.join(missing) if missing else 'none'}",
+    ]
+    sys.exit("\n".join(lines))
 
 
 def collect_icon_paths(root: Path):
@@ -33,11 +61,20 @@ def normalize_file_name(fileName):
 def skip_file(fileName):
     return fileName.startswith("Rectangle")
 
+expected_categories = read_category_config()
+expected_category_set = set(expected_categories)
+manual_categories = sorted(item.name for item in source_path.iterdir() if item.is_dir() and not item.name.startswith("."))
+manual_category_set = set(manual_categories)
+unexpected_manual_categories = sorted(manual_category_set - expected_category_set)
+missing_manual_categories = sorted(expected_category_set - manual_category_set)
+
+if unexpected_manual_categories or missing_manual_categories:
+    fail_category_mismatch("inputZipManual", unexpected_manual_categories, missing_manual_categories)
+
 existing_icons_before = collect_icon_paths(dst_root_path)
 
-for category_dir in source_path.iterdir():
-    if not category_dir.is_dir():
-        continue
+for category_name in expected_categories:
+    category_dir = source_path / category_name
     print(f"\n=== Processing category: {category_dir.name} ===")
 
     # 1. Поиск zip-файла
@@ -87,6 +124,10 @@ for category_dir in source_path.iterdir():
                 shutil.rmtree(item)
         except Exception as e:
             print(f"⚠️ Could not delete {item}: {e}")
+
+for existing_category_dir in dst_root_path.iterdir():
+    if existing_category_dir.is_dir() and existing_category_dir.name not in expected_category_set:
+        shutil.rmtree(existing_category_dir)
 
 print("\nDone. Icons updated from inputZipManual and source cleaned.")
 

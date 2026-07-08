@@ -3,6 +3,8 @@ const path = require('path');
 const fse = require('fs-extra');
 const { optimize } = require('svgo');
 
+const { getCategoryValues } = require('./icon-categories.cjs');
+
 const CURRENT_COLOR = 'currentColor';
 const ORIGINAL_COLOR_CATEGORIES = new Set(['flags']);
 
@@ -151,7 +153,9 @@ const SOURCE_DIR = 'public/icons';
 (function () {
   makeDirectory(BUILD_DIR);
 
-  const categories = fse.readdirSync(SOURCE_DIR);
+  const categories = getCategoryValues();
+  syncCategoryDirectories(BUILD_DIR, categories);
+  syncCategoryDirectories(SOURCE_DIR, categories);
   categories.forEach((categoryName) => formatCategory(categoryName));
 
   function makeDirectory(path) {
@@ -160,8 +164,22 @@ const SOURCE_DIR = 'public/icons';
     }
   }
 
+  function syncCategoryDirectories(rootDir, categories) {
+    makeDirectory(rootDir);
+
+    const categorySet = new Set(categories);
+    fse
+      .readdirSync(rootDir, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory() && !categorySet.has(entry.name))
+      .forEach((entry) => fse.removeSync(path.join(rootDir, entry.name)));
+
+    categories.forEach((categoryName) => makeDirectory(path.join(rootDir, categoryName)));
+  }
+
   function formatCategory(categoryName) {
-    makeDirectory(path.join(BUILD_DIR, categoryName));
+    const buildCategoryPath = path.join(BUILD_DIR, categoryName);
+
+    fse.emptyDirSync(buildCategoryPath);
 
     const categoryPath = path.join(SOURCE_DIR, categoryName);
     const icons = fse.readdirSync(categoryPath).filter((iconName) => path.extname(iconName) === '.svg');
