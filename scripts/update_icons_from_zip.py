@@ -6,7 +6,7 @@ import zipfile
 from pathlib import Path
 
 repo_root = Path(__file__).resolve().parent.parent
-source_path = repo_root / "inputZip"
+source_path = repo_root / "inputZipManual"
 dst_root_path = repo_root / "public" / "icons"
 
 if not source_path.is_dir():
@@ -88,7 +88,7 @@ for category_dir in source_path.iterdir():
         except Exception as e:
             print(f"⚠️ Could not delete {item}: {e}")
 
-print("\nDone. Icons updated from inputZip and source cleaned.")
+print("\nDone. Icons updated from inputZipManual and source cleaned.")
 
 existing_icons_after = collect_icon_paths(dst_root_path)
 added_icons = sorted(set(existing_icons_after) - set(existing_icons_before))

@@ -42,7 +42,7 @@ bun.lockb
 # Storybook
 *storybook.log
 
-inputZip/**/*.zip
+inputZipManual/**/*.zip
 commitMessages.txt
 
 # Playwright
