@@ -1,15 +1,77 @@
 # Contributing: обновление иконок в admiral3-icons
 
-Этот документ описывает полный рабочий процесс обновления иконок из макета Pixso до PR и релиза библиотеки.
+Этот документ описывает рабочий процесс обновления иконок из Pixso до PR и релиза библиотеки.
 
----
+## Навигация
+
+- [Коротко](#коротко)
+- [Источник правды по категориям](#источник-правды-по-категориям)
+- [Структура исходных данных в Pixso](#структура-исходных-данных-в-pixso)
+- [Основной workflow: Pixso Plugin ZIP](#основной-workflow-pixso-plugin-zip)
+- [Fallback workflow: ручные ZIP по категориям](#fallback-workflow-ручные-zip-по-категориям)
+- [Валидация и ошибки категорий](#валидация-и-ошибки-категорий)
+- [Что синхронизируется скриптами](#что-синхронизируется-скриптами)
+- [Стратегия коммитов](#стратегия-коммитов)
+- [Визуальная проверка](#визуальная-проверка)
+- [Проверка через Storybook](#проверка-через-storybook)
+- [Pull Request и сборка](#pull-request-и-сборка)
+- [Релиз](#релиз)
+- [Шпаргалка](#шпаргалка)
+
+## Коротко
+
+Основной сценарий:
+
+```bash
+# 1. Положить в inputZip/ ZIP иконок из плагина и отдельный ZIP флагов
+# 2. Запустить обновление
+npm run icons:update
+```
+
+Fallback-сценарий:
+
+```bash
+# 1. Положить ручные ZIP по категориям в inputZipManual/<category>/
+# 2. Запустить ручное обновление
+npm run icons:update:manual
+```
+
+После обновления проверить изменения и выполнить:
+
+```bash
+npm run check:full
+```
+
+## Источник правды по категориям
+
+`icon-categories.json` - источник правды для:
+
+- внутренних имен категорий в репозитории (`value`);
+- подписей категорий для UI/Storybook (`label`);
+- названий фреймов в Pixso Plugin ZIP (`pixsoFrameName`).
+
+При добавлении, удалении или переименовании категории сначала обновляется `icon-categories.json`, и только потом запускается обновление иконок.
+
+Текущая связь Pixso -> репозиторий:
+
+| Pixso frame   | Repository category |
+| ------------- | ------------------- |
+| Category      | `category`          |
+| Communication | `communication`     |
+| Documents     | `documents`         |
+| Finance       | `finance`           |
+| Flags         | `flags`             |
+| Location      | `location`          |
+| Logo Icons    | `logo`              |
+| Redact        | `redact`            |
+| Security      | `security`          |
+| Service       | `service`           |
+| System        | `system`            |
 
 ## Структура исходных данных в Pixso
 
 Ссылка на макет Pixso:
 [макет иконок](https://pixso.t1-pixso.ru/app/design/ScdIpzGMpqFkDZMw7MDwbA?icon_type=1&page-id=1%3A93&editMode=coder&item-id=1089%3A1135)
-
----
 
 ### Page Icons
 
@@ -38,34 +100,62 @@
 
 - Flags
 
----
+## Основной workflow: Pixso Plugin ZIP
 
-## Соответствие фреймов папкам в репозитории
+Основной сценарий использует два ZIP: обычные иконки выгружаются через Pixso Icons Plugin, а флаги — отдельным ручным ZIP, как в fallback-сценарии. Имена архивов не важны: скрипт определяет их по содержимому.
 
-ZIP-архивы вручную складываются в корневой каталог:
+1. Открыть макет Pixso и скопировать фреймы с обычными иконками из страницы Icons в новый файл. Это нужно, потому что Pixso "Icons Plugin" работает только с файлами, к которым у пользователя есть права на редактирование; к исходному макету таких прав нет и не должно быть.
+2. В новом файле открыть раздел Plugins и запустить плагин "Icons Plugin". Если плагин не установлен, установить его из [каталога плагинов Pixso](https://pixso.t1-pixso.ru/plugins/).
+3. В плагине открыть вкладку Download, нажать кнопку выгрузки и дождаться, пока плагин сформирует ZIP. Вкладка Compare нужна для сравнения изменений: если всегда копировать фреймы в один и тот же рабочий файл, через нее можно отслеживать, что изменилось.
+4. На странице Flags выделить все SVG во фрейме Flags и экспортировать их отдельным ZIP через Export Layers.
+5. Положить оба `.zip` файла в `inputZip/`.
+6. Запустить:
 
-`inputZip/`
+```bash
+npm run icons:update
+```
 
-### Page Icons
+Команда запускает:
 
-System -> `inputZip/system`  
-Service -> `inputZip/service`  
-Category -> `inputZip/category`  
-Documents -> `inputZip/documents`  
-Security -> `inputZip/security`  
-Finance -> `inputZip/finance`  
-Communication -> `inputZip/communication`  
-Location -> `inputZip/location`  
-Redact -> `inputZip/redact`  
-Logo icons -> `inputZip/logo`
+```bash
+python3 scripts/update_icons_from_single_zip.py
+npm run build-meta
+```
 
-### Page Flags
+После успешного выполнения:
 
-Flags -> `inputZip/flags`
+- `public/icons/<category>` полностью синхронизируется с ZIP;
+- `inputZip/` очищается, остается только `.gitkeep`;
+- создается `commitMessages.txt` со списками добавленных и удаленных иконок;
+- запускается генерация metadata и TypeScript exports.
 
----
+## Fallback workflow: ручные ZIP по категориям
 
-## Экспорт иконок из Pixso
+Ручной сценарий нужен как запасной путь, если полный ZIP из Pixso Icons Plugin временно недоступен.
+
+ZIP-архивы вручную складываются в:
+
+```text
+inputZipManual/<category>/
+```
+
+Соответствие фреймов папкам:
+
+| Pixso frame   | Manual input folder            |
+| ------------- | ------------------------------ |
+| System        | `inputZipManual/system`        |
+| Service       | `inputZipManual/service`       |
+| Category      | `inputZipManual/category`      |
+| Documents     | `inputZipManual/documents`     |
+| Security      | `inputZipManual/security`      |
+| Finance       | `inputZipManual/finance`       |
+| Communication | `inputZipManual/communication` |
+| Location      | `inputZipManual/location`      |
+| Redact        | `inputZipManual/redact`        |
+| Logo Icons    | `inputZipManual/logo`          |
+| Flags         | `inputZipManual/flags`         |
+
+### Экспорт вручную из Pixso
 
 1. Открыть макет и перейти на нужную страницу.
 2. Выбрать нужный фрейм, например System.
@@ -73,32 +163,14 @@ Flags -> `inputZip/flags`
 4. Справа открыть раздел Export.
 5. Нажать "+", выбрать формат SVG.
 6. Нажать Export Layers.
-7. Сохранить ZIP, имя архива неважно, в `inputZip/<категория>`, например `inputZip/system`.
+7. Сохранить ZIP в `inputZipManual/<category>`, например `inputZipManual/system`.
 
-Повторить для всех фреймов.
+Повторить для всех категорий из `icon-categories.json`.
 
----
-
-## Скрипт обновления иконок
-
-### Что делает скрипт
-
-1. Находит ZIP в `inputZip`.
-2. Распаковывает архивы по категориям.
-3. Нормализует имена файлов:
-   - обрезает пробелы в начале и конце
-   - заменяет подряд идущие пробелы на одиночный
-   - убирает пробел перед `.svg`
-4. Кладет SVG в `public/icons/<категория>`.
-5. Очищает временные файлы в `inputZip`, оставляя `.gitkeep`.
-6. Генерирует `commitMessages.txt`:
-   - добавленные иконки, если есть
-   - удаленные иконки, если есть
-
-### Команда запуска
+### Команда ручного запуска
 
 ```bash
-npm run icons:update
+npm run icons:update:manual
 ```
 
 Команда запускает:
@@ -108,17 +180,50 @@ python3 scripts/update_icons_from_zip.py
 npm run build-meta
 ```
 
-После выполнения проверьте изменения в:
+После успешного выполнения папки в `inputZipManual/<category>` очищаются, в каждой остается `.gitkeep`.
 
-- `public/icons`
-- `build`
-- `metadata.json`
-- `flags-metadata.json`
-- `src/icons`
-- `src/index.ts`
-- `src/flags.ts`
+## Валидация и ошибки категорий
 
----
+Основной Pixso Plugin workflow останавливается до изменения `public/icons`, если:
+
+- в `inputZip/` лежит не ровно два `.zip`;
+- по набору папок нельзя однозначно определить ZIP обычных иконок;
+- в ZIP обычных иконок отсутствует не-flag фрейм, объявленный в `icon-categories.json`;
+- в ZIP обычных иконок есть неизвестный верхнеуровневый фрейм;
+- после фильтрации в категории не осталось ни одного SVG;
+- после нормализации два SVG в одной категории получили одинаковое имя;
+- ZIP содержит небезопасный путь для распаковки.
+
+Оба workflow нормализуют имена SVG:
+
+- обрезают пробелы в начале и конце;
+- заменяют подряд идущие пробельные символы на один пробел;
+- убирают пробел перед `.svg`;
+- пропускают служебные файлы `Rectangle*.svg`.
+
+Если в Pixso добавили или удалили категорию, скрипт завершится с сообщением вида:
+
+```text
+Icon category list changed in Pixso Plugin ZIP. Update icon-categories.json first.
+Unexpected categories: ...
+Missing categories: ...
+```
+
+Это означает, что сначала нужно явно обновить `icon-categories.json`, а затем повторить `npm run icons:update`.
+
+## Что синхронизируется скриптами
+
+Эти файлы и директории считаются script-synchronized outputs и не должны редактироваться вручную при обычном обновлении иконок:
+
+- `src/iconCategoryConfig.ts` - генерируется из `icon-categories.json`;
+- `public/icons/<category>` - обновляется из Pixso ZIP;
+- `build/<category>` - генерируется из `public/icons`;
+- `metadata.json` и `flags-metadata.json` - генерируются из `build`;
+- `src/icons/<category>.ts` - генерируется по категориям из `icon-categories.json`;
+- `src/index.ts` - генерируется для всех категорий, кроме `flags`;
+- `src/flags.ts` - генерируется только для категории `flags`.
+
+Root entry point `@admiral-ds/admiral3-icons` экспортирует все не-flag категории. Флаги доступны только через `@admiral-ds/admiral3-icons/flags`.
 
 ## Стратегия коммитов
 
@@ -130,24 +235,18 @@ npm run build-meta
 
 Используем три отдельных коммита.
 
----
-
 ### 1. Коммит: новые иконки
 
 Если новых иконок нет, шаг пропускается.
 
 Включаем:
 
-- только новые SVG-файлы
-- сгенерированные изменения, которые нужны для их экспорта
+- только новые SVG-файлы;
+- сгенерированные изменения, которые нужны для их экспорта.
 
-Проверить:  
-в Pixso -> Changelog -> проверить, что все иконки, указанные там, добавились в проект.
+Проверить: в Pixso -> Changelog -> проверить, что все иконки, указанные там, добавились в проект.
 
-Commit message:  
-использовать текст, сгенерированный скриптом в `commitMessages.txt`.
-
----
+Commit message: использовать текст, сгенерированный скриптом в `commitMessages.txt`.
 
 ### 2. Коммит: удаленные иконки
 
@@ -155,13 +254,10 @@ Commit message:
 
 Включаем:
 
-- только удаленные SVG-файлы
-- сгенерированные изменения, которые убирают их из exports и metadata
+- только удаленные SVG-файлы;
+- сгенерированные изменения, которые убирают их из exports и metadata.
 
-Commit message:  
-использовать текст, сгенерированный скриптом в `commitMessages.txt`.
-
----
+Commit message: использовать текст, сгенерированный скриптом в `commitMessages.txt`.
 
 ### 3. Коммит: остальные изменения
 
@@ -172,8 +268,6 @@ Commit message:
 ```text
 Update existing icons
 ```
-
----
 
 ## Визуальная проверка
 
@@ -205,11 +299,9 @@ npm run test:visual:update
 
 Проверить:
 
-1. каждую измененную иконку
-2. сравнить до/после
-3. проверить целостность, отсутствие артефактов
-
----
+1. каждую измененную иконку;
+2. сравнить до/после;
+3. проверить целостность, отсутствие артефактов.
 
 ## Проверка через Storybook
 
@@ -227,31 +319,27 @@ npm run storybook
 
 ### Проверяем
 
-- все ли иконки видны
-- корректно ли отображение
-- нет ли битых путей
-- корректно ли работают темы через `@admiral-ds/admiral3-tokens`
+- все ли иконки видны;
+- корректно ли отображение;
+- нет ли битых путей;
+- корректно ли работают темы через `@admiral-ds/admiral3-tokens`.
 
 Если все хорошо, можно делать Pull Request.
 
----
-
 ## Pull Request и сборка
 
-1. Собираем изменения в три отдельных коммита: новые -> удаленные -> изменения.
-2. Создаем Pull Request.
-3. Проверяем CI.
+1. Собрать изменения в три отдельных коммита: новые -> удаленные -> изменения.
+2. Создать Pull Request.
+3. Проверить CI.
 
 ### После принятия PR
 
 После принятия PR должны проходить:
 
-1. сборка проекта
-2. проверка exports
-3. e2e-тесты
-4. публикация пакета по релизному процессу
-
----
+1. сборка проекта;
+2. проверка exports;
+3. e2e-тесты;
+4. публикация пакета по релизному процессу.
 
 ## Релиз
 
@@ -264,24 +352,24 @@ npm run release
 ```
 
 2. Скрипт автоматически сгенерирует:
-   - Change Log
-   - Release Message со списком добавленных и удаленных иконок
+   - Change Log;
+   - Release Message со списком добавленных и удаленных иконок.
 
 3. Проверить корректность текста релиза.
 4. Создать релиз на GitHub. Публикация в npm произойдет автоматически после создания тега.
 
----
-
 ## Шпаргалка
 
-1. Экспортировать ZIP -> `inputZip/<категория>`
-2. Запустить `npm run icons:update`
-3. Проверить изменения иконок вручную
-4. Выполнить `npm run check:full`
-5. Подготовить три коммита
-6. Собрать Storybook через `npm run storybook:build`
-7. Проверить Storybook через `npm run storybook`
-8. Создать PR
-9. Принять PR
-10. Выполнить `npm run release`
-11. Создать релиз на GitHub
+1. Обновить `icon-categories.json`, если в Pixso изменился набор категорий.
+2. Основной сценарий: положить один Pixso Plugin ZIP в `inputZip/`.
+3. Запустить `npm run icons:update`.
+4. Fallback: положить ручные ZIP в `inputZipManual/<category>/` и запустить `npm run icons:update:manual`.
+5. Проверить `commitMessages.txt` и изменения иконок вручную.
+6. Выполнить `npm run check:full`.
+7. Подготовить три коммита.
+8. Собрать Storybook через `npm run storybook:build`.
+9. Проверить Storybook через `npm run storybook`.
+10. Создать PR.
+11. Принять PR.
+12. Выполнить `npm run release`.
+13. Создать релиз на GitHub.

@@ -4,7 +4,7 @@
 			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
 		</filter>
 	</defs>
-	<mask id="mask_665" width="28.000000" height="20.000000" x="0.000000" y="4.000000" maskUnits="userSpaceOnUse">
+	<mask id="mask_948" width="28.000000" height="20.000000" x="0.000000" y="4.000000" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
 			<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 			<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
@@ -13,7 +13,7 @@
 	<rect id="Malaysia" width="28.000000" height="28.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
 	<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-	<g mask="url(#mask_665)">
+	<g mask="url(#mask_948)">
 		<path id="Rectangle 537" d="M28 5.33333L28 4L13.3333 4L13.3333 5.33333L28 5.33333ZM28 8L28 6.66667L13.3333 6.66667L13.3333 8L28 8ZM28 10.6667L28 9.33333L13.3333 9.33333L13.3333 10.6667L28 10.6667ZM28 13.3333L28 12L13.3333 12L13.3333 13.3333L28 13.3333ZM28 16L28 14.6667L0 14.6667L0 16L28 16ZM28 18.6667L28 17.3333L0 17.3333L0 18.6667L28 18.6667ZM28 21.3333L28 20L0 20L0 21.3333L28 21.3333ZM28 24L28 22.6667L0 22.6667L0 24L28 24Z" fill="rgb(225,36,74)" fill-rule="evenodd" />
 		<path id="Rectangle 537" d="M28 5.33333L28 4L13.3333 4L13.3333 5.33333L28 5.33333ZM28 8L28 6.66667L13.3333 6.66667L13.3333 8L28 8ZM28 10.6667L28 9.33333L13.3333 9.33333L13.3333 10.6667L28 10.6667ZM28 13.3333L28 12L13.3333 12L13.3333 13.3333L28 13.3333ZM28 16L28 14.6667L0 14.6667L0 16L28 16ZM28 18.6667L28 17.3333L0 17.3333L0 18.6667L28 18.6667ZM28 21.3333L28 20L0 20L0 21.3333L28 21.3333ZM28 24L28 22.6667L0 22.6667L0 24L28 24Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
 		<rect id="Rectangle 1568" width="16.000000" height="10.666667" x="0.000000" y="4.000000" fill="rgb(12,63,142)" />

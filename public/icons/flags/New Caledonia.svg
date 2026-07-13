@@ -1,10 +1,10 @@
-<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.000000" height="28.000000" fill="none" mask="url(#mask_812)">
+<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.000000" height="28.000000" fill="none" mask="url(#mask_1095)">
 	<defs>
 		<filter id="pixso_custom_mask_type_alpha">
 			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
 		</filter>
 	</defs>
-	<mask id="mask_812" width="28.000000" height="20.000000" x="0.000000" y="3.994934" maskUnits="userSpaceOnUse">
+	<mask id="mask_1095" width="28.000000" height="20.000000" x="0.000000" y="3.994934" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
 			<rect id="Rectangle 2323" width="28.000000" height="20.000000" x="0.000000" y="3.994934" rx="3.000000" fill="rgb(196,196,196)" />
 		</g>

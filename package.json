@@ -30,14 +30,14 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "icons:update": "python3 scripts/update_icons_from_zip.py && npm run build-meta",
+    "icons:update": "sh -c 'python3 scripts/update_icons_from_single_zip.py \"$@\" && case \" $* \" in *\" --help \"*|*\" -h \"*) ;; *) npm run build-meta ;; esac' --",
     "check:fix": "npm run format && npm run lint:fix",
     "check:full": "npm run format:check && npm run lint && npm run typecheck && npm run test:exports && npm run test:e2e && npm run test:visual",
     "storybook": "storybook dev -p 6006",
     "playground": "vite --config vite.playground.config.ts",
     "release": "standard-version",
     "build": "rm -rf dist && npm run build-meta && vite build && tsc -p tsconfig.lib.json",
-    "build-meta": "node scripts/formatSvg.cjs && node scripts/createMetadata.js && node scripts/generate-svg-icon-exports.cjs",
+    "build-meta": "node scripts/sync-icon-category-config.cjs && node scripts/formatSvg.cjs && node scripts/createMetadata.js && node scripts/generate-svg-icon-exports.cjs",
     "storybook:build": "storybook build",
     "playground:build": "vite build --config vite.playground.config.ts",
     "playground:serve": "serve -s dist-playground -l 4173",
@@ -52,7 +52,8 @@
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "typecheck": "tsc -b tsconfig.json",
-    "dev": "vite"
+    "dev": "vite",
+    "icons:update:manual": "sh -c 'python3 scripts/update_icons_from_zip.py \"$@\" && case \" $* \" in *\" --help \"*|*\" -h \"*) ;; *) npm run build-meta ;; esac' --"
   },
   "peerDependencies": {
     "react": "^19.2.4",

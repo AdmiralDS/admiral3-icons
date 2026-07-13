@@ -20,8 +20,8 @@ npm install @admiral-ds/admiral3-icons
 
 Peer dependencies:
 
-- `react`
-- `react-dom`
+- `react` `^19.2.4`
+- `react-dom` `^19.2.4`
 
 ## Использование
 
@@ -60,6 +60,7 @@ export function Example() {
 
 - `@admiral-ds/admiral3-icons` - React-компоненты всех категорий, кроме флагов.
 - `@admiral-ds/admiral3-icons/flags` - React-компоненты флагов.
+- `@admiral-ds/admiral3-icons/package.json` - metadata пакета.
 
 ## Разработка
 
