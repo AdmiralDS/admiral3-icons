@@ -19,37 +19,35 @@ from icon_update_common import (
 )
 
 
-# В этот каталог пользователь кладет ровно один ZIP, экспортированный
-# Pixso Icons Plugin.
+# В этот каталог пользователь кладет два ZIP: обычные иконки из
+# Pixso Icons Plugin и отдельный ручной экспорт флагов.
 source_path = REPO_ROOT / "inputZip"
 
 # Временная папка для распаковки. Она удаляется в finally, чтобы не оставлять
 # промежуточные файлы после успешного импорта или ошибки.
-tmp_extract_path = REPO_ROOT / ".tmp" / "pixso-plugin-icons"
+tmp_extract_path = REPO_ROOT / ".tmp" / "pixso-icons"
+plugin_extract_path = tmp_extract_path / "plugin"
+flags_extract_path = tmp_extract_path / "flags"
 
 
 def parse_args():
     # Сейчас у скрипта нет параметров, но argparse оставлен для единообразного
     # CLI-интерфейса и нормального вывода --help.
     parser = argparse.ArgumentParser(
-        description="Update public/icons from a single Pixso Icons Plugin ZIP in inputZip."
+        description="Update public/icons from Pixso Plugin and flags ZIP files in inputZip."
     )
     return parser.parse_args()
 
 
-def get_single_zip_file():
-    # Автоматический сценарий ожидает один архив. Если ZIP несколько, скрипт не
-    # угадывает нужный, чтобы случайно не смешать разные экспорты.
+def get_zip_files():
     if not source_path.is_dir():
         sys.exit(f"source path is not a directory: {source_path}")
 
     zip_files = sorted(source_path.glob("*.zip"))
-    if len(zip_files) != 1:
-        sys.exit(
-            f"inputZip must contain exactly one .zip file from Pixso Icons Plugin. Found: {len(zip_files)}"
-        )
+    if len(zip_files) != 2:
+        sys.exit(f"inputZip must contain exactly two .zip files: icons and flags. Found: {len(zip_files)}")
 
-    return zip_files[0]
+    return zip_files
 
 
 def is_ignored_zip_entry(parts):
@@ -80,13 +78,45 @@ def get_zip_entries(zip_ref, include_dirs=False):
     return entries
 
 
-def validate_zip_structure(zip_ref, categories):
+def get_top_level_names(zip_ref):
+    return {parts[0] for _, parts in get_zip_entries(zip_ref, include_dirs=True)}
+
+
+def identify_zip_files(zip_files, categories):
+    expected_plugin_frames = {
+        category["pixsoFrameName"] for category in categories if category["value"] != "flags"
+    }
+    plugin_candidates = []
+
+    for zip_file in zip_files:
+        try:
+            with zipfile.ZipFile(zip_file, "r") as zip_ref:
+                if get_top_level_names(zip_ref) == expected_plugin_frames:
+                    plugin_candidates.append(zip_file)
+        except zipfile.BadZipFile as error:
+            sys.exit(f"Invalid ZIP file {zip_file.name}: {error}")
+
+    if len(plugin_candidates) != 1:
+        names = ", ".join(zip_file.name for zip_file in zip_files)
+        sys.exit(
+            "Could not uniquely identify the Pixso Plugin ZIP by its category folders.\n"
+            f"Expected plugin categories: {', '.join(sorted(expected_plugin_frames))}\n"
+            f"ZIP files: {names}"
+        )
+
+    plugin_zip = plugin_candidates[0]
+    flags_zip = next(zip_file for zip_file in zip_files if zip_file != plugin_zip)
+    return plugin_zip, flags_zip
+
+
+def validate_plugin_zip_structure(zip_ref, categories):
     # Верхний уровень ZIP должен в точности совпадать с pixsoFrameName из
     # icon-categories.json. Это ловит ситуации, когда в Pixso переименовали,
     # добавили или удалили фрейм, но конфиг еще не обновили.
-    expected_frames = {category["pixsoFrameName"] for category in categories}
-    entries = get_zip_entries(zip_ref, include_dirs=True)
-    top_level_names = {parts[0] for _, parts in entries}
+    expected_frames = {
+        category["pixsoFrameName"] for category in categories if category["value"] != "flags"
+    }
+    top_level_names = get_top_level_names(zip_ref)
 
     unexpected_frames = sorted(top_level_names - expected_frames)
     missing_frames = sorted(expected_frames - top_level_names)
@@ -98,12 +128,14 @@ def validate_extracted_icons(categories):
     # После безопасной распаковки собираем SVG по каждому Pixso-фрейму и снова
     # проверяем дубли уже на уровне файлов. Здесь мы работаем с реальной
     # файловой системой, потому что SVG могут лежать во вложенных папках.
-    expected_frames = {category["pixsoFrameName"] for category in categories}
+    expected_frames = {
+        category["pixsoFrameName"] for category in categories if category["value"] != "flags"
+    }
     svg_files_by_frame = {frame_name: [] for frame_name in expected_frames}
     normalized_names_by_frame = {frame_name: set() for frame_name in expected_frames}
 
     for frame_name in expected_frames:
-        frame_dir = tmp_extract_path / frame_name
+        frame_dir = plugin_extract_path / frame_name
         if not frame_dir.is_dir():
             continue
 
@@ -134,7 +166,26 @@ def validate_extracted_icons(categories):
     return svg_files_by_frame
 
 
-def update_icons(categories, svg_files_by_frame):
+def validate_extracted_flags():
+    svg_files = []
+    normalized_names = set()
+
+    for svg_file in sorted(flags_extract_path.rglob("*.svg")):
+        normalized_name = normalize_file_name(svg_file.name)
+        if skip_file(normalized_name):
+            continue
+        if normalized_name in normalized_names:
+            sys.exit(f"Flags ZIP contains duplicate SVG after normalization: {normalized_name}")
+        normalized_names.add(normalized_name)
+        svg_files.append(svg_file)
+
+    if not svg_files:
+        sys.exit("Flags ZIP must contain at least one SVG after filtering skipped files.")
+
+    return svg_files
+
+
+def update_icons(categories, svg_files_by_frame, flag_svg_files):
     # Основной шаг синхронизации: каждая категория полностью удаляется и
     # создается заново из текущего ZIP. Так старые иконки, которых больше нет в
     # экспорте, не остаются в public/icons.
@@ -145,16 +196,18 @@ def update_icons(categories, svg_files_by_frame):
 
     for category in categories:
         category_name = category["value"]
-        frame_name = category["pixsoFrameName"]
         dst_dir = DST_ROOT_PATH / category_name
 
         if dst_dir.exists():
             shutil.rmtree(dst_dir)
 
-        # frame_name связывает имя фрейма из Pixso с именем категории в
-        # репозитории: например, "System icons" -> "system".
-        copy_svg_files_to_category(svg_files_by_frame[frame_name], dst_dir)
-        print(f"Updated {category_name} from Pixso frame {frame_name}")
+        if category_name == "flags":
+            copy_svg_files_to_category(flag_svg_files, dst_dir)
+            print("Updated flags from separate flags ZIP")
+        else:
+            frame_name = category["pixsoFrameName"]
+            copy_svg_files_to_category(svg_files_by_frame[frame_name], dst_dir)
+            print(f"Updated {category_name} from Pixso frame {frame_name}")
 
     remove_unknown_categories(expected_category_values)
 
@@ -184,20 +237,27 @@ def main():
     # Для Pixso ZIP требуется pixsoFrameName, потому что именно эти имена
     # должны совпасть с верхнеуровневыми папками архива.
     categories = read_category_config(require_pixso_frame_name=True)
-    zip_file = get_single_zip_file()
+    zip_files = get_zip_files()
+    plugin_zip, flags_zip = identify_zip_files(zip_files, categories)
+    print(f"Identified Pixso Plugin ZIP: {plugin_zip.name}")
+    print(f"Identified flags ZIP: {flags_zip.name}")
 
     if tmp_extract_path.exists():
         shutil.rmtree(tmp_extract_path)
 
     try:
-        with zipfile.ZipFile(zip_file, "r") as zip_ref:
+        with zipfile.ZipFile(plugin_zip, "r") as zip_ref:
             # Сначала проверяем структуру архива без записи файлов, затем
             # распаковываем его безопасным способом во временную папку.
-            validate_zip_structure(zip_ref, categories)
-            safe_extract(zip_ref, tmp_extract_path, "Pixso Plugin ZIP")
+            validate_plugin_zip_structure(zip_ref, categories)
+            safe_extract(zip_ref, plugin_extract_path, "Pixso Plugin ZIP")
+
+        with zipfile.ZipFile(flags_zip, "r") as zip_ref:
+            safe_extract(zip_ref, flags_extract_path, "Flags ZIP")
 
         svg_files_by_frame = validate_extracted_icons(categories)
-        update_icons(categories, svg_files_by_frame)
+        flag_svg_files = validate_extracted_flags()
+        update_icons(categories, svg_files_by_frame, flag_svg_files)
         clean_input_zip()
     finally:
         # Временная папка удаляется даже при ошибке, чтобы не загрязнять рабочее
@@ -205,7 +265,7 @@ def main():
         if tmp_extract_path.exists():
             shutil.rmtree(tmp_extract_path)
 
-    print("\nDone. Icons updated from Pixso Plugin ZIP.")
+    print("\nDone. Icons updated from Pixso Plugin and flags ZIP files.")
 
 
 if __name__ == "__main__":

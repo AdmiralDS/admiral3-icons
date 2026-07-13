@@ -10,7 +10,7 @@
 ## Основной поток данных
 
 ```text
-inputZip/*.zip
+inputZip/<plugin-icons.zip + flags.zip>
   -> scripts/update_icons_from_single_zip.py
   -> public/icons/<category>/*.svg
   -> scripts/formatSvg.cjs
@@ -52,9 +52,9 @@ inputZipManual/<category>/*.zip
 
 ## Каталоги
 
-- `inputZip` - временная папка для одного ZIP из Pixso Icons Plugin. После `npm run icons:update` скрипт очищает содержимое, оставляя `.gitkeep`.
+- `inputZip` - временная папка для двух ZIP: обычных иконок из Pixso Icons Plugin и отдельного ручного экспорта флагов. После `npm run icons:update` скрипт очищает содержимое, оставляя `.gitkeep`.
 - `inputZipManual/<category>` - fallback-папки для ручных ZIP-архивов по категориям. После `npm run icons:update:manual` скрипт очищает содержимое категории, оставляя `.gitkeep`.
-- `.tmp/pixso-plugin-icons` - временная папка распаковки Pixso Plugin ZIP. Генерируется и удаляется скриптом.
+- `.tmp/pixso-icons` - временная папка распаковки обоих ZIP. Генерируется и удаляется скриптом.
 - `public/icons/<category>` - исходные SVG по категориям. Синхронизируется скриптами из Pixso ZIP, не часть публичного API пакета.
 - `build/<category>` - оптимизированные SVG после SVGO. Генерируется из `public/icons`, используется для сборки React-компонентов и не является публичным API пакета.
 - `src/icons/<category>.ts` - сгенерированные React-экспорты категории через `vite-plugin-svgr`.
@@ -96,7 +96,7 @@ inputZipManual/<category>/*.zip
 
 ## Scripts
 
-- `npm run icons:update` - распаковывает один Pixso Plugin ZIP из `inputZip`, валидирует категории, обновляет `public/icons`, генерирует `commitMessages.txt`, затем запускает `build-meta`.
+- `npm run icons:update` - распознает и распаковывает Pixso Plugin ZIP и отдельный ZIP флагов из `inputZip`, валидирует категории, обновляет `public/icons`, генерирует `commitMessages.txt`, затем запускает `build-meta`.
 - `npm run icons:update:manual` - fallback: распаковывает ручные ZIP из `inputZipManual/<category>`, обновляет `public/icons`, генерирует `commitMessages.txt`, затем запускает `build-meta`.
 - `npm run build-meta` - оптимизирует SVG в `build`, пересобирает `metadata.json`, `flags-metadata.json` и TS-экспорты.
 - `npm run build` - запускает `build-meta`, Vite library build и генерацию `.d.ts`.
@@ -119,10 +119,11 @@ inputZipManual/<category>/*.zip
 ## Скрипты генерации
 
 - `scripts/update_icons_from_single_zip.py`
-  - читает ровно один ZIP из `inputZip`;
-  - сверяет верхнеуровневые папки ZIP с `pixsoFrameName` из `icon-categories.json`;
+  - читает ровно два ZIP из `inputZip` и определяет их по содержимому;
+  - сверяет верхнеуровневые папки Pixso Plugin ZIP со всеми не-flag `pixsoFrameName` из `icon-categories.json`;
+  - рекурсивно собирает SVG из отдельного ZIP флагов;
   - проверяет, что каждая категория содержит SVG после фильтрации;
-  - безопасно распаковывает ZIP во временную папку `.tmp/pixso-plugin-icons`;
+  - безопасно распаковывает ZIP во временную папку `.tmp/pixso-icons`;
   - нормализует имена файлов;
   - пропускает файлы, начинающиеся с `Rectangle`;
   - полностью заменяет SVG в `public/icons/<category>`;
@@ -234,7 +235,7 @@ Storybook не является runtime для e2e-тестов.
 
 ## Что редактировать вручную
 
-- При обычном обновлении иконок вручную кладется только один Pixso Plugin ZIP в `inputZip`.
+- При обычном обновлении в `inputZip` кладутся Pixso Plugin ZIP с обычными иконками и отдельный ZIP флагов.
 - Для fallback-обновления вручную кладутся только ZIP-архивы в `inputZipManual/<category>`.
 - При изменении набора категорий вручную редактируется `icon-categories.json`.
 - `src/iconCategoryConfig.ts`, `public/icons`, `build`, `metadata.json`, `flags-metadata.json`, `src/icons`, `src/index.ts` и `src/flags.ts` должны обновляться через скрипты.
