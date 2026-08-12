@@ -4,6 +4,9 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
+    cooldown:
+      exclude:
+        - '@admiral-ds/admiral3-tokens'
     versioning-strategy: 'increase'
     allow:
       - dependency-name: '@admiral-ds/admiral3-tokens'
