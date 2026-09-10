@@ -1,11 +1,14 @@
 # Project Map
 
-Пакет `@admiral-ds/admiral3-icons` публикует SVG-иконки Admiral 3.0 как React-компоненты.
+Пакет `@admiral-ds/admiral3-icons` публикует SVG-иконки Admiral 3.0 как React-компоненты, независимые от фреймворка SVG-данные и vanilla-утилиты для DOM и SSR.
 
 ## Назначение проекта
 
 - Основной entry point `@admiral-ds/admiral3-icons` экспортирует React-компоненты всех категорий, кроме флагов.
 - Subpath `@admiral-ds/admiral3-icons/flags` экспортирует только флаги.
+- Subpath `@admiral-ds/admiral3-icons/data` экспортирует SVG-данные всех категорий, кроме флагов.
+- Subpath `@admiral-ds/admiral3-icons/flags-data` экспортирует только SVG-данные флагов.
+- Subpath `@admiral-ds/admiral3-icons/vanilla` экспортирует утилиты для создания SVG DOM-элементов, рендеринга в контейнер и SSR-строки.
 
 ## Основной поток данных
 
@@ -18,9 +21,10 @@ inputZip/<plugin-icons.zip + flags.zip>
   -> scripts/createMetadata.js
   -> metadata.json + flags-metadata.json
   -> scripts/generate-svg-icon-exports.cjs
-  -> src/icons/<category>.ts + src/index.ts + src/flags.ts
+  -> src/icons/<category>.ts + src/data/<category>.ts
+  -> src/index.ts + src/flags.ts + src/data.ts + src/flags-data.ts
   -> vite build + tsc
-  -> dist/*.js + dist/*.d.ts
+  -> dist/index.* + dist/flags.* + dist/data.* + dist/flags-data.* + dist/vanilla.*
 ```
 
 Fallback-поток для ручного экспорта по категориям:
@@ -34,7 +38,7 @@ inputZipManual/<category>/*.zip
 
 ## Категории иконок
 
-`icon-categories.json` - источник правды для категорий, Storybook labels и названий фреймов Pixso. Скрипты синхронизируют `public/icons`, `build`, `src/iconCategoryConfig.ts`, `src/icons`, `src/index.ts` и `src/flags.ts` с этим конфигом.
+`icon-categories.json` - источник правды для категорий, Storybook labels и названий фреймов Pixso. Скрипты синхронизируют `public/icons`, `build`, `src/iconCategoryConfig.ts`, `src/icons`, `src/data`, `src/index.ts`, `src/flags.ts`, `src/data.ts` и `src/flags-data.ts` с этим конфигом.
 
 - `category`
 - `communication`
@@ -48,7 +52,7 @@ inputZipManual/<category>/*.zip
 - `service`
 - `system`
 
-Флаги входят в `metadata.json`, но не экспортируются из root entry point.
+Флаги входят в `metadata.json`, но не экспортируются из root entry points `@admiral-ds/admiral3-icons` и `@admiral-ds/admiral3-icons/data`.
 
 ## Каталоги
 
@@ -58,8 +62,13 @@ inputZipManual/<category>/*.zip
 - `public/icons/<category>` - исходные SVG по категориям. Синхронизируется скриптами из Pixso ZIP, не часть публичного API пакета.
 - `build/<category>` - оптимизированные SVG после SVGO. Генерируется из `public/icons`, используется для сборки React-компонентов и не является публичным API пакета.
 - `src/icons/<category>.ts` - сгенерированные React-экспорты категории через `vite-plugin-svgr`.
+- `src/data/<category>.ts` - сгенерированные независимые от фреймворка SVG-описания категории.
 - `src/index.ts` - root entry point, реэкспортирует все `src/icons/*`, кроме `flags`.
 - `src/flags.ts` - отдельный entry point для `@admiral-ds/admiral3-icons/flags`.
+- `src/data.ts` - root data entry point, реэкспортирует все `src/data/*`, кроме `flags`, и типы SVG-описаний.
+- `src/flags-data.ts` - отдельный data entry point для SVG-описаний флагов.
+- `src/svg-data.ts` - общие типы `SvgIconDefinition` и `SvgIconNode`.
+- `src/vanilla.ts` - независимые от React DOM- и SSR-утилиты для SVG-описаний.
 - `dist/` - результат library build: ESM entry points и `.d.ts`. Генерируется, не редактируется вручную.
 - `playground/` - internal Vite-приложение для browser/runtime-проверок.
 - `playground/scenarios/` - сценарии playground. `index.ts` собирает реестр, `icon-gallery.tsx` показывает данные из `metadata.json`.
@@ -80,7 +89,7 @@ inputZipManual/<category>/*.zip
 - `metadata.json` - сгенерированная metadata по всем категориям: имя, путь, SVG и тип `outline`/`solid`.
 - `flags-metadata.json` - сгенерированная metadata флагов: path, ISO-код, английское и русское название страны.
 - `commitMessages.txt` - создается скриптами обновления после обновления ZIP; содержит шаблоны сообщений для добавленных и удаленных иконок.
-- `vite.config.ts` - library build для `src/index.ts` и `src/flags.ts`.
+- `vite.config.ts` - library build для React-, data- и vanilla-entry points.
 - `vite.playground.config.ts` - сборка internal playground в `dist-playground`.
 - `playwright.config.ts` - e2e-конфиг; запускает `npm run playground:serve` на `http://localhost:4173`.
 - `playwright.visual.config.ts` - visual snapshot-конфиг; запускает Chromium и хранит снимки в `tests/visual`.
@@ -100,7 +109,7 @@ inputZipManual/<category>/*.zip
 - `npm run icons:update:manual` - fallback: распаковывает ручные ZIP из `inputZipManual/<category>`, обновляет `public/icons`, генерирует `commitMessages.txt`, затем запускает `build-meta`.
 - `npm run build-meta` - оптимизирует SVG в `build`, пересобирает `metadata.json`, `flags-metadata.json` и TS-экспорты.
 - `npm run build` - запускает `build-meta`, Vite library build и генерацию `.d.ts`.
-- `npm run test:exports` - собирает пакет, устанавливает tarball во временный проект и проверяет публичные ESM exports.
+- `npm run test:exports` - собирает пакет, проверяет vanilla-утилиты, устанавливает tarball во временный проект и проверяет публичные ESM exports с React и без него.
 - `npm run test:e2e` - собирает пакет и playground, затем запускает Playwright.
 - `npm run test:e2e-ui` - то же, но в UI-режиме Playwright.
 - `npm run test:visual` - собирает пакет и playground, затем запускает visual snapshot-тесты.
@@ -161,21 +170,27 @@ inputZipManual/<category>/*.zip
 - `scripts/generate-svg-icon-exports.cjs`
   - читает категории из `icon-categories.json` и данные из `metadata.json`;
   - генерирует `src/icons/<category>.ts`;
+  - преобразует SVG в типизированные описания и генерирует `src/data/<category>.ts`;
   - генерирует `src/index.ts` без `flags`;
-  - генерирует `src/flags.ts` для отдельного subpath.
+  - генерирует `src/flags.ts` для отдельного React-subpath;
+  - генерирует `src/data.ts` без `flags` и `src/flags-data.ts` для отдельного data-subpath.
+- `scripts/test-vanilla-utilities.cjs`
+  - импортирует собранные SVG-данные и vanilla-утилиты из `dist`;
+  - проверяет создание DOM-элемента, рендеринг в контейнер и SSR-строку.
 - `scripts/test-package-exports.cjs`
   - делает `npm pack`;
   - устанавливает tarball во временный проект;
-  - проверяет root import и flags import;
+  - проверяет `data`, `flags-data` и `vanilla` без React;
+  - проверяет root import и flags import после установки React;
   - проверяет, что exports с префиксом `Flags` не попадают в root import.
 
 ## Сборка пакета
 
 Library build настраивается в `vite.config.ts`:
 
-- entry points: `src/index.ts`, `src/flags.ts`;
+- entry points: `src/index.ts`, `src/flags.ts`, `src/data.ts`, `src/flags-data.ts`, `src/vanilla.ts`;
 - формат: ESM;
-- output files: `dist/index.js`, `dist/flags.js`;
+- output files: `dist/index.js`, `dist/flags.js`, `dist/data.js`, `dist/flags-data.js`, `dist/vanilla.js`;
 - external dependencies: `react`, `react-dom`, `react/jsx-runtime`;
 - SVG импортируются как React-компоненты через `vite-plugin-svgr`.
 
@@ -205,6 +220,8 @@ Storybook используется как витрина и docs/a11y-слой:
 - `.storybook/preview.tsx` - глобальные decorators/parameters.
 - `.storybook/storybookThemes.ts` и `DocsThemeContainer.tsx` - темы документации.
 - `.storybook/preview.css` - глобальные стили preview.
+- `src/stories/BundleSize.template.tsx` - документация по выбору entry point и влиянию импорта на bundle size.
+- `src/stories/NativeSvg.template.tsx` - примеры использования SVG-данных и vanilla-утилит без React-компонентов.
 
 Storybook не является runtime для e2e-тестов.
 
@@ -238,7 +255,7 @@ Storybook не является runtime для e2e-тестов.
 - При обычном обновлении в `inputZip` кладутся Pixso Plugin ZIP с обычными иконками и отдельный ZIP флагов.
 - Для fallback-обновления вручную кладутся только ZIP-архивы в `inputZipManual/<category>`.
 - При изменении набора категорий вручную редактируется `icon-categories.json`.
-- `src/iconCategoryConfig.ts`, `public/icons`, `build`, `metadata.json`, `flags-metadata.json`, `src/icons`, `src/index.ts` и `src/flags.ts` должны обновляться через скрипты.
+- `src/iconCategoryConfig.ts`, `public/icons`, `build`, `metadata.json`, `flags-metadata.json`, `src/icons`, `src/data`, `src/index.ts`, `src/flags.ts`, `src/data.ts` и `src/flags-data.ts` должны обновляться через скрипты.
 - `dist` и `dist-playground` являются build-артефактами и не редактируются вручную.
 - При изменении package exports нужно обновлять `package.json`, сборку и `scripts/test-package-exports.cjs`.
 - При изменении runtime-сценариев нужно синхронизировать `playground/scenarios` и `tests/e2e`.

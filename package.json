@@ -13,6 +13,18 @@
     "./flags": {
       "types": "./dist/flags.d.ts",
       "import": "./dist/flags.js"
+    },
+    "./data": {
+      "types": "./dist/data.d.ts",
+      "import": "./dist/data.js"
+    },
+    "./flags-data": {
+      "types": "./dist/flags-data.d.ts",
+      "import": "./dist/flags-data.js"
+    },
+    "./vanilla": {
+      "types": "./dist/vanilla.d.ts",
+      "import": "./dist/vanilla.js"
     }
   },
   "keywords": [
@@ -42,7 +54,7 @@
     "playground:build": "vite build --config vite.playground.config.ts",
     "playground:serve": "serve -s dist-playground -l 4173",
     "pack:check": "npm pack --dry-run",
-    "test:exports": "npm run build && node scripts/test-package-exports.cjs",
+    "test:exports": "npm run build && node scripts/test-vanilla-utilities.cjs && node scripts/test-package-exports.cjs",
     "test:e2e": "npm run build && npm run playground:build && playwright test",
     "test:e2e-ui": "npm run build && npm run playground:build && playwright test --ui",
     "test:visual": "npm run build && npm run playground:build && playwright test --config playwright.visual.config.ts",
@@ -58,6 +70,14 @@
   "peerDependencies": {
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@admiral-ds/admiral3-tokens": "~0.0.6",

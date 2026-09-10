@@ -39,6 +39,16 @@
       "@admiral-ds/admiral3-icons/*": ["./*"]
     }
   },
-  "include": ["src/index.ts", "src/flags.ts", "src/icons/**/*.ts", "src/vite-env.d.ts"],
+  "include": [
+    "src/index.ts",
+    "src/flags.ts",
+    "src/data.ts",
+    "src/flags-data.ts",
+    "src/vanilla.ts",
+    "src/svg-data.ts",
+    "src/icons/**/*.ts",
+    "src/data/**/*.ts",
+    "src/vite-env.d.ts"
+  ],
   "exclude": ["src/**/*.stories.*", "src/**/*.test.*", "src/**/*.spec.*"]
 }
