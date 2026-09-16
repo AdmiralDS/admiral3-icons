@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
+import { BundleSizeTemplate } from './BundleSize.template';
+import bundleSizeTemplateRaw from './BundleSize.template?raw';
 import { CurrentColorTemplate } from './CurrentColor.template';
 import currentColorTemplateRaw from './CurrentColor.template?raw';
 import { FlagsTemplate } from './Flags.template';
@@ -8,6 +10,8 @@ import { IconsTemplate } from './Icons.template';
 import iconsTemplateRaw from './Icons.template?raw';
 import { LoadersTemplate } from './Loaders.template';
 import loadersTemplateRaw from './Loaders.template?raw';
+import { NativeSvgTemplate } from './NativeSvg.template';
+import nativeSvgTemplateRaw from './NativeSvg.template?raw';
 
 const meta = {
   title: 'Icons/Icons',
@@ -60,6 +64,30 @@ export const CurrentColor: Story = {
     docs: {
       source: {
         code: currentColorTemplateRaw,
+      },
+    },
+  },
+};
+
+export const NativeSvg: Story = {
+  render: NativeSvgTemplate,
+  name: 'Нативный SVG',
+  parameters: {
+    docs: {
+      source: {
+        code: nativeSvgTemplateRaw,
+      },
+    },
+  },
+};
+
+export const BundleSize: Story = {
+  render: BundleSizeTemplate,
+  name: 'Размер итоговой сборки',
+  parameters: {
+    docs: {
+      source: {
+        code: bundleSizeTemplateRaw,
       },
     },
   },

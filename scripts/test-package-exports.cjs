@@ -22,7 +22,25 @@ try {
   const tarballPath = join(tempDir, tarballName);
 
   run('npm', ['init', '-y']);
-  run('npm', ['install', '--silent', tarballPath]);
+  run('npm', ['install', '--silent', '--omit=peer', tarballPath]);
+
+  const dataResult = run('node', [
+    '--input-type=module',
+    '-e',
+    [
+      "try { import.meta.resolve('@admiral-ds/admiral3-icons/build/service/CheckOutline.svg'); throw new Error('SVG build subpath should not be exported'); } catch (error) { if (error.code !== 'ERR_PACKAGE_PATH_NOT_EXPORTED') throw error; }",
+      "const { ServiceCheckOutlineData } = await import('@admiral-ds/admiral3-icons/data');",
+      "const { FlagsRussianFederationData } = await import('@admiral-ds/admiral3-icons/flags-data');",
+      "const { renderSvgIconToString } = await import('@admiral-ds/admiral3-icons/vanilla');",
+      "const renderedIcon = renderSvgIconToString(ServiceCheckOutlineData, { width: 32, className: 'check' });",
+      "if (!renderedIcon.startsWith('<svg') || !renderedIcon.includes('width=\"32\"') || !renderedIcon.includes('class=\"check\"') || !renderedIcon.includes('<path')) throw new Error('Vanilla SVG renderer returned invalid markup');",
+      'const renderedFlag = renderSvgIconToString(FlagsRussianFederationData);',
+      "if (!renderedFlag.includes('<mask') || !renderedFlag.includes('<rect')) throw new Error('Complex SVG data was not preserved');",
+      "console.log('data and vanilla exports work without React');",
+    ].join(' '),
+  ]);
+
+  run('npm', ['install', '--silent', 'react@^19.2.4', 'react-dom@^19.2.4']);
 
   const esmResult = run('node', [
     '--input-type=module',
@@ -37,6 +55,7 @@ try {
     ].join(' '),
   ]);
 
+  console.log(dataResult);
   console.log(esmResult);
 } finally {
   rmSync(tempDir, { recursive: true, force: true });

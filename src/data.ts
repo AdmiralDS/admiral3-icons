@@ -1,0 +1,11 @@
+export * from './data/category';
+export * from './data/communication';
+export * from './data/documents';
+export * from './data/finance';
+export * from './data/location';
+export * from './data/logo';
+export * from './data/redact';
+export * from './data/security';
+export * from './data/service';
+export * from './data/system';
+export type { SvgIconDefinition, SvgIconNode } from './svg-data';
