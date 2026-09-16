@@ -36,6 +36,9 @@
       "#src/*": ["./src/*"],
       "@admiral-ds/admiral3-icons": ["./src/index.ts"],
       "@admiral-ds/admiral3-icons/flags": ["./src/flags.ts"],
+      "@admiral-ds/admiral3-icons/data": ["./src/data.ts"],
+      "@admiral-ds/admiral3-icons/flags-data": ["./src/flags-data.ts"],
+      "@admiral-ds/admiral3-icons/vanilla": ["./src/vanilla.ts"],
       "@admiral-ds/admiral3-icons/*": ["./*"]
     }
   },
