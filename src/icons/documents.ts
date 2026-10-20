@@ -46,12 +46,12 @@ export { default as DocumentsDocSignOutline } from '../../build/documents/DocSig
 export { default as DocumentsDocSignSolid } from '../../build/documents/DocSignSolid.svg?react';
 export { default as DocumentsDocSignVerifyOutline } from '../../build/documents/DocSignVerifyOutline.svg?react';
 export { default as DocumentsDocSignVerifySolid } from '../../build/documents/DocSignVerifySolid.svg?react';
-export { default as DocumentsDocViewOutline } from '../../build/documents/DocViewOutline.svg?react';
-export { default as DocumentsDocViewSolid } from '../../build/documents/DocViewSolid.svg?react';
 export { default as DocumentsDocsOutline } from '../../build/documents/DocsOutline.svg?react';
 export { default as DocumentsDocsSolid } from '../../build/documents/DocsSolid.svg?react';
 export { default as DocumentsDocumentAddOutline } from '../../build/documents/DocumentAddOutline.svg?react';
 export { default as DocumentsDocumentAddSolid } from '../../build/documents/DocumentAddSolid.svg?react';
+export { default as DocumentsDocViewOutline } from '../../build/documents/DocViewOutline.svg?react';
+export { default as DocumentsDocViewSolid } from '../../build/documents/DocViewSolid.svg?react';
 export { default as DocumentsDuplicateOutline } from '../../build/documents/DuplicateOutline.svg?react';
 export { default as DocumentsDuplicateSolid } from '../../build/documents/DuplicateSolid.svg?react';
 export { default as DocumentsEditAltOutline } from '../../build/documents/EditAltOutline.svg?react';
@@ -94,6 +94,7 @@ export { default as DocumentsFolderDeleteOutline } from '../../build/documents/F
 export { default as DocumentsFolderDeleteSolid } from '../../build/documents/FolderDeleteSolid.svg?react';
 export { default as DocumentsFolderOutline } from '../../build/documents/FolderOutline.svg?react';
 export { default as DocumentsFolderSolid } from '../../build/documents/FolderSolid.svg?react';
+export { default as DocumentsFootnoteOutline } from '../../build/documents/FootnoteOutline.svg?react';
 export { default as DocumentsInvoiceOutline } from '../../build/documents/InvoiceOutline.svg?react';
 export { default as DocumentsInvoiceSolid } from '../../build/documents/InvoiceSolid.svg?react';
 export { default as DocumentsJpgOutline } from '../../build/documents/JpgOutline.svg?react';
@@ -102,10 +103,10 @@ export { default as DocumentsMissingDocumentOutline } from '../../build/document
 export { default as DocumentsMissingDocumentSolid } from '../../build/documents/MissingDocumentSolid.svg?react';
 export { default as DocumentsPDFOutline } from '../../build/documents/PDFOutline.svg?react';
 export { default as DocumentsPDFSolid } from '../../build/documents/PDFSolid.svg?react';
-export { default as DocumentsPPTOutline } from '../../build/documents/PPTOutline.svg?react';
-export { default as DocumentsPPTSolid } from '../../build/documents/PPTSolid.svg?react';
 export { default as DocumentsPersonCardOutline } from '../../build/documents/PersonCardOutline.svg?react';
 export { default as DocumentsPersonCardSolid } from '../../build/documents/PersonCardSolid.svg?react';
+export { default as DocumentsPPTOutline } from '../../build/documents/PPTOutline.svg?react';
+export { default as DocumentsPPTSolid } from '../../build/documents/PPTSolid.svg?react';
 export { default as DocumentsRotateLeftOutline } from '../../build/documents/RotateLeftOutline.svg?react';
 export { default as DocumentsRotateLeftSolid } from '../../build/documents/RotateLeftSolid.svg?react';
 export { default as DocumentsRotateRightOutline } from '../../build/documents/RotateRightOutline.svg?react';
