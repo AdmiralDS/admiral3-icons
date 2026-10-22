@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/AdmiralDS/admiral3-icons/compare/v0.0.4...v0.0.5) (2026-10-22)
+
+
+### Features
+
+* **icons:** add new icons ([c28d028](https://github.com/AdmiralDS/admiral3-icons/commit/c28d028765e01bf465137779a0e57a481de28905))
+
 ### [0.0.4](https://github.com/AdmiralDS/admiral3-icons/compare/v0.0.3...v0.0.4) (2026-09-16)
 
 
