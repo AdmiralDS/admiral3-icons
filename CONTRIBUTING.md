@@ -115,7 +115,7 @@ npm run check:full
 npm run icons:update
 ```
 
-Команда автоматически находит Python 3 (`py -3`, `python` или `python3`) в Windows, macOS и Linux, где Python 3 должен быть установлен и доступен через PATH. Далее команда запускает `scripts/update_icons_from_zip.py`, а после успешного импорта выполняет `npm run build-meta`.
+Команда автоматически находит Python 3 (`py -3`, `python` или `python3`) в Windows, macOS и Linux, где Python 3 должен быть установлен и доступен через PATH. Далее команда запускает `scripts/update_icons_from_single_zip.py`, а после успешного импорта выполняет `npm run build-meta`.
 
 Для справки без импорта и генерации метаданных: `npm run icons:update -- --help`.
 
