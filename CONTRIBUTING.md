@@ -115,12 +115,9 @@ npm run check:full
 npm run icons:update
 ```
 
-Команда запускает:
+Команда автоматически находит Python 3 (`py -3`, `python` или `python3`) в Windows, macOS и Linux, где Python 3 должен быть установлен и доступен через PATH. Далее команда запускает `scripts/update_icons_from_single_zip.py`, а после успешного импорта выполняет `npm run build-meta`.
 
-```bash
-python3 scripts/update_icons_from_single_zip.py
-npm run build-meta
-```
+Для справки без импорта и генерации метаданных: `npm run icons:update -- --help`.
 
 После успешного выполнения:
 
@@ -173,12 +170,9 @@ inputZipManual/<category>/
 npm run icons:update:manual
 ```
 
-Команда запускает:
+Команда автоматически находит Python 3 в Windows, macOS и Linux, запускает `scripts/update_icons_from_zip.py`, а после успешного импорта выполняет `npm run build-meta`.
 
-```bash
-python3 scripts/update_icons_from_zip.py
-npm run build-meta
-```
+Для справки без импорта и генерации метаданных: `npm run icons:update:manual -- --help`.
 
 После успешного выполнения папки в `inputZipManual/<category>` очищаются, в каждой остается `.gitkeep`.
 

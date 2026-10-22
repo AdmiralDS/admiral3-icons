@@ -94,6 +94,7 @@ export { default as DocumentsFolderDeleteOutline } from '../../build/documents/F
 export { default as DocumentsFolderDeleteSolid } from '../../build/documents/FolderDeleteSolid.svg?react';
 export { default as DocumentsFolderOutline } from '../../build/documents/FolderOutline.svg?react';
 export { default as DocumentsFolderSolid } from '../../build/documents/FolderSolid.svg?react';
+export { default as DocumentsFootnoteOutline } from '../../build/documents/FootnoteOutline.svg?react';
 export { default as DocumentsInvoiceOutline } from '../../build/documents/InvoiceOutline.svg?react';
 export { default as DocumentsInvoiceSolid } from '../../build/documents/InvoiceSolid.svg?react';
 export { default as DocumentsJpgOutline } from '../../build/documents/JpgOutline.svg?react';

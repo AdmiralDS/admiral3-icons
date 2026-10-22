@@ -84,6 +84,12 @@
     "rusName": "Аруба"
   },
   {
+    "path": "@admiral-ds/admiral3-icons/build/flags/AscensionIsland.svg",
+    "isoCode": "AC",
+    "name": "AscensionIsland",
+    "rusName": "Остров Вознесения"
+  },
+  {
     "path": "@admiral-ds/admiral3-icons/build/flags/Australia.svg",
     "isoCode": "AUS",
     "name": "Australia",
@@ -258,6 +264,12 @@
     "rusName": "Канада"
   },
   {
+    "path": "@admiral-ds/admiral3-icons/build/flags/CanaryIslands.svg",
+    "isoCode": "IC",
+    "name": "CanaryIslands",
+    "rusName": "Канарские острова"
+  },
+  {
     "path": "@admiral-ds/admiral3-icons/build/flags/CaymanIslands.svg",
     "isoCode": "CYM",
     "name": "CaymanIslands",
@@ -268,6 +280,12 @@
     "isoCode": "CAF",
     "name": "CentralAfricanRepublic",
     "rusName": "Центральноафриканская Республика"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/CeutaAndMelilla.svg",
+    "isoCode": "EA",
+    "name": "CeutaAndMelilla",
+    "rusName": "Сеута и Мелилья"
   },
   {
     "path": "@admiral-ds/admiral3-icons/build/flags/Chad.svg",
@@ -292,6 +310,12 @@
     "isoCode": "CXR",
     "name": "ChristmasIsland",
     "rusName": "Остров Рождества"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/ClippertonIsland.svg",
+    "isoCode": "CP",
+    "name": "ClippertonIsland",
+    "rusName": "Остров Клиппертон"
   },
   {
     "path": "@admiral-ds/admiral3-icons/build/flags/CocosKeelingIslands.svg",
@@ -376,6 +400,12 @@
     "isoCode": "DNK",
     "name": "Denmark",
     "rusName": "Дания"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/DiegoGarcia.svg",
+    "isoCode": "DG",
+    "name": "DiegoGarcia",
+    "rusName": "Диего-Гарсия"
   },
   {
     "path": "@admiral-ds/admiral3-icons/build/flags/Djibouti.svg",
@@ -730,6 +760,12 @@
     "isoCode": "KOR",
     "name": "KoreaSouth",
     "rusName": "Южная Корея"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/Kosovo.svg",
+    "isoCode": "XKX",
+    "name": "Kosovo",
+    "rusName": "Косово"
   },
   {
     "path": "@admiral-ds/admiral3-icons/build/flags/Kuwait.svg",
@@ -1302,6 +1338,12 @@
     "rusName": "Суринам"
   },
   {
+    "path": "@admiral-ds/admiral3-icons/build/flags/SvalbardAndJanMayen.svg",
+    "isoCode": "SJM",
+    "name": "SvalbardAndJanMayen",
+    "rusName": "Шпицберген и Ян-Майен"
+  },
+  {
     "path": "@admiral-ds/admiral3-icons/build/flags/Sweden.svg",
     "isoCode": "SWE",
     "name": "Sweden",
@@ -1372,6 +1414,12 @@
     "isoCode": "TTO",
     "name": "TrinidadAndTobago",
     "rusName": "Тринидад и Тобаго"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/TristanDaCunha.svg",
+    "isoCode": "TA",
+    "name": "TristanDaCunha",
+    "rusName": "Тристан-да-Кунья"
   },
   {
     "path": "@admiral-ds/admiral3-icons/build/flags/Tunisia.svg",

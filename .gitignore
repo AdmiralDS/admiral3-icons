@@ -55,3 +55,6 @@ commitMessages.txt
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# Python cache
+__pycache__/

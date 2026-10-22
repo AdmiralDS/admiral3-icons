@@ -1,30 +1,30 @@
-<svg viewBox="0 0 39.1502 30.6668" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39.150223" height="30.666786" fill="none" customFrame="#000000">
+<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.000000" height="28.000000" fill="none">
 	<defs>
 		<filter id="pixso_custom_mask_type_alpha">
 			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
 		</filter>
 	</defs>
-	<mask id="mask_913" width="28.000000" height="20.000000" x="5.575119" y="5.333389" maskUnits="userSpaceOnUse">
+	<mask id="mask_345" width="28.000000" height="20.000000" x="0.000000" y="4.000000" maskUnits="userSpaceOnUse">
 		<g filter="url(#pixso_custom_mask_type_alpha)">
-			<rect id="Mask" width="28.000000" height="20.000000" x="5.575119" y="5.333389" rx="3.000000" fill="rgb(255,255,255)" />
-			<rect id="Mask" width="28.000000" height="20.000000" x="5.575119" y="5.333389" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
+			<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
+			<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" stroke="rgb(151,151,151)" stroke-opacity="0" stroke-width="0.000000" />
 		</g>
 	</mask>
-	<rect id="Saint Kitts and Nevis" width="28.000000" height="28.000000" x="5.575119" y="1.333389" fill="rgb(255,255,255)" fill-opacity="0" />
-	<rect id="Mask" width="28.000000" height="20.000000" x="5.575119" y="5.333389" rx="3.000000" fill="rgb(255,255,255)" />
-	<rect id="Mask" width="28.000000" height="20.000000" x="5.575119" y="5.333389" rx="3.000000" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-	<g mask="url(#mask_913)">
-		<path id="Rectangle 2" d="M5.57512 18.6667L33.5751 5.33339L5.57512 5.33339L5.57512 18.6667Z" fill="rgb(30,193,96)" fill-rule="evenodd" />
-		<path id="Rectangle 2" d="M33.5751 5.33339L5.57512 5.33339L5.57512 18.6667L33.5751 5.33339Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-		<path id="Rectangle 2" d="M5.57512 25.3333L33.5751 25.3333L33.5751 12L5.57512 25.3333Z" fill="rgb(223,42,64)" fill-rule="evenodd" />
-		<path id="Rectangle 2" d="M33.5751 25.3333L33.5751 12L5.57512 25.3333L33.5751 25.3333Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-		<path id="Rectangle 2" d="M6.35902 30.6668L39.1502 10.1766L32.7912 1.52588e-05L-1.52588e-05 20.4902L6.35902 30.6668Z" fill="rgb(255,217,86)" fill-rule="evenodd" />
-		<path id="Rectangle 2" d="M39.1502 10.1766L32.7912 1.52588e-05L-1.52588e-05 20.4902L6.35902 30.6668L39.1502 10.1766Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-		<path id="Rectangle 2" d="M4.94593 28.4054L37.7371 7.91514L34.2043 2.26149L1.41313 22.7517L4.94593 28.4054Z" fill="rgb(38,38,38)" fill-rule="evenodd" />
-		<path id="Rectangle 2" d="M37.7371 7.91514L34.2043 2.26149L1.41313 22.7517L4.94593 28.4054L37.7371 7.91514Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-		<path id="Star 29" d="M25.8845 13.1309L24.9391 14.6282L24.3256 12.967L22.6094 12.5306L23.9998 11.4338L23.8845 9.66676L25.3572 10.6501L27.0022 9.99444L26.522 11.6989L27.6539 13.0608L25.8845 13.1309Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
-		<path id="Star 29" d="M24.9391 14.6282L24.3256 12.967L22.6094 12.5306L23.9998 11.4338L23.8845 9.66676L25.3572 10.6501L27.0022 9.99444L26.522 11.6989L27.6539 13.0608L25.8845 13.1309L24.9391 14.6282Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
-		<path id="Star 29" d="M15.2179 19.5975L14.2724 21.0949L13.659 19.4337L11.9428 18.9973L13.3331 17.9005L13.2179 16.1334L14.6906 17.1168L16.3355 16.4611L15.8554 18.1656L16.9873 19.5275L15.2179 19.5975Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
-		<path id="Star 29" d="M14.2724 21.0949L13.659 19.4337L11.9428 18.9973L13.3331 17.9005L13.2179 16.1334L14.6906 17.1168L16.3355 16.4611L15.8554 18.1656L16.9873 19.5275L15.2179 19.5975L14.2724 21.0949Z" fill-rule="evenodd" stroke="rgb(150.96,150.96,150.96)" stroke-opacity="0" stroke-width="0.000000" />
+	<rect id="Saint Kitts and Nevis" width="28.000000" height="28.000000" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+	<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" fill="rgb(255,255,255)" />
+	<rect id="Mask" width="28.000000" height="20.000000" x="0.000000" y="4.000000" rx="3.000000" stroke="rgb(151,151,151)" stroke-opacity="0" stroke-width="0.000000" />
+	<g mask="url(#mask_345)">
+		<path id="Rectangle 2" d="M0 17.3333L28 4L0 4L0 17.3333Z" fill="rgb(30,193,96)" fill-rule="evenodd" />
+		<path id="Rectangle 2" d="M28 4L0 4L0 17.3333L28 4Z" fill-rule="evenodd" stroke="rgb(151,151,151)" stroke-opacity="0" stroke-width="0.000000" />
+		<path id="Rectangle 2" d="M0 24L28 24L28 10.6666L0 24Z" fill="rgb(223,42,64)" fill-rule="evenodd" />
+		<path id="Rectangle 2" d="M28 24L28 10.6666L0 24L28 24Z" fill-rule="evenodd" stroke="rgb(151,151,151)" stroke-opacity="0" stroke-width="0.000000" />
+		<path id="Rectangle 2" d="M0.783897 29.3334L33.5751 8.8432L27.2161 -1.33337L-5.57513 19.1568L0.783897 29.3334Z" fill="rgb(255,217,86)" fill-rule="evenodd" />
+		<path id="Rectangle 2" d="M33.5751 8.8432L27.2161 -1.33337L-5.57513 19.1568L0.783897 29.3334L33.5751 8.8432Z" fill-rule="evenodd" stroke="rgb(151,151,151)" stroke-opacity="0" stroke-width="0.000000" />
+		<path id="Rectangle 2" d="M-0.629192 27.072L32.162 6.58175L28.6292 0.928101L-4.16199 21.4183L-0.629192 27.072Z" fill="rgb(38,38,38)" fill-rule="evenodd" />
+		<path id="Rectangle 2" d="M32.162 6.58175L28.6292 0.928101L-4.16199 21.4183L-0.629192 27.072L32.162 6.58175Z" fill-rule="evenodd" stroke="rgb(151,151,151)" stroke-opacity="0" stroke-width="0.000000" />
+		<path id="Star 29" d="M20.3094 11.7975L19.364 13.2948L18.7505 11.6336L17.0343 11.1972L18.4246 10.1005L18.3094 8.33337L19.7821 9.31675L21.427 8.66106L20.9469 10.3656L22.0788 11.7274L20.3094 11.7975Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
+		<path id="Star 29" d="M19.364 13.2948L18.7505 11.6336L17.0343 11.1972L18.4246 10.1005L18.3094 8.33337L19.7821 9.31675L21.427 8.66106L20.9469 10.3656L22.0788 11.7274L20.3094 11.7975L19.364 13.2948Z" fill-rule="evenodd" stroke="rgb(151,151,151)" stroke-opacity="0" stroke-width="0.000000" />
+		<path id="Star 29" d="M9.64274 18.2642L8.69733 19.7615L8.08389 18.1003L6.36768 17.6639L7.75801 16.5671L7.64274 14.8L9.11544 15.7834L10.7604 15.1277L10.2803 16.8322L11.4122 18.1941L9.64274 18.2642Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
+		<path id="Star 29" d="M8.69733 19.7615L8.08389 18.1003L6.36768 17.6639L7.75801 16.5671L7.64274 14.8L9.11544 15.7834L10.7604 15.1277L10.2803 16.8322L11.4122 18.1941L9.64274 18.2642L8.69733 19.7615Z" fill-rule="evenodd" stroke="rgb(151,151,151)" stroke-opacity="0" stroke-width="0.000000" />
 	</g>
 </svg>

@@ -1,3 +1,4 @@
+// AC, CP, DG, EA, IC and TA use reserved alpha-2 codes without alpha-3 equivalents.
 export default {
   AFG: 'Afghanistan',
   ALA: 'AlandIslands',
@@ -13,6 +14,7 @@ export default {
   ARG: 'Argentina',
   ARM: 'Armenia',
   ABW: 'Aruba',
+  AC: 'AscensionIsland',
   AUS: 'Australia',
   AUT: 'Austria',
   AZE: 'Azerbaijan',
@@ -42,12 +44,15 @@ export default {
   KHM: 'Cambodia',
   CMR: 'Cameroon',
   CAN: 'Canada',
+  IC: 'CanaryIslands',
   CYM: 'CaymanIslands',
   CAF: 'CentralAfricanRepublic',
+  EA: 'CeutaAndMelilla',
   TCD: 'Chad',
   CHL: 'Chile',
   CHN: 'China',
   CXR: 'ChristmasIsland',
+  CP: 'ClippertonIsland',
   CCK: 'CocosKeelingIslands',
   COL: 'Colombia',
   COM: 'Comoros',
@@ -62,6 +67,7 @@ export default {
   CYP: 'Cyprus',
   CZE: 'Czechia',
   DNK: 'Denmark',
+  DG: 'DiegoGarcia',
   DJI: 'Djibouti',
   DMA: 'Dominica',
   DOM: 'DominicanRepublic',
@@ -217,6 +223,7 @@ export default {
   SDN: 'Sudan',
   SUR: 'Suriname',
   SWZ: 'Eswatini',
+  SJM: 'SvalbardAndJanMayen',
   SWE: 'Sweden',
   CHE: 'Switzerland',
   SYR: 'SyrianArabRepublic',
@@ -229,6 +236,7 @@ export default {
   TON: 'Tonga',
   TKL: 'Tokelau',
   TTO: 'TrinidadAndTobago',
+  TA: 'TristanDaCunha',
   TUN: 'Tunisia',
   TUR: 'Turkey',
   TKM: 'Turkmenistan',
@@ -252,4 +260,7 @@ export default {
 
   // неофициальный (отсутствует в ISO) код республики ABH
   ABH: 'Abkhazia',
+
+  // User-assigned code used by the EU; Kosovo has no official ISO 3166 code.
+  XKX: 'Kosovo',
 };

@@ -240,6 +240,7 @@ export { default as SystemSwitchPinnedAreasOutline } from '../../build/system/Sw
 export { default as SystemSwitchPinnedAreasSolid } from '../../build/system/SwitchPinnedAreasSolid.svg?react';
 export { default as SystemSyncForbidOutline } from '../../build/system/SyncForbidOutline.svg?react';
 export { default as SystemSyncPermitOutline } from '../../build/system/SyncPermitOutline.svg?react';
+export { default as SystemTableActionsOutline } from '../../build/system/TableActionsOutline.svg?react';
 export { default as SystemThirdPersonOutline } from '../../build/system/ThirdPersonOutline.svg?react';
 export { default as SystemThirdPersonSolid } from '../../build/system/ThirdPersonSolid.svg?react';
 export { default as SystemTimeOutline } from '../../build/system/TimeOutline.svg?react';
