@@ -14,17 +14,28 @@ const run = (command, args, options = {}) =>
     ...options,
   }).trim();
 
-try {
-  const tarballName = execFileSync('npm', ['pack', '--silent', '--pack-destination', tempDir], {
-    cwd: packageRoot,
+const npmCli = process.env.npm_execpath;
+
+if (!npmCli) {
+  throw new Error('Run this script through npm run test:exports');
+}
+
+const runNpm = (args, options = {}) =>
+  execFileSync(process.execPath, [npmCli, ...args], {
+    cwd: tempDir,
     encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'pipe'],
+    ...options,
   }).trim();
+
+try {
+  const tarballName = runNpm(['pack', '--silent', '--pack-destination', tempDir], { cwd: packageRoot });
   const tarballPath = join(tempDir, tarballName);
 
-  run('npm', ['init', '-y']);
-  run('npm', ['install', '--silent', '--omit=peer', tarballPath]);
+  runNpm(['init', '-y']);
+  runNpm(['install', '--silent', '--omit=peer', tarballPath]);
 
-  const dataResult = run('node', [
+  const dataResult = run(process.execPath, [
     '--input-type=module',
     '-e',
     [
@@ -40,9 +51,9 @@ try {
     ].join(' '),
   ]);
 
-  run('npm', ['install', '--silent', 'react@^19.2.4', 'react-dom@^19.2.4']);
+  runNpm(['install', '--silent', 'react@^19.2.4', 'react-dom@^19.2.4']);
 
-  const esmResult = run('node', [
+  const esmResult = run(process.execPath, [
     '--input-type=module',
     '-e',
     [
