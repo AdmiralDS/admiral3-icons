@@ -10,9 +10,9 @@ export { default as LogoDockerOutline } from '../../build/logo/DockerOutline.svg
 export { default as LogoDockerSolid } from '../../build/logo/DockerSolid.svg?react';
 export { default as LogoETCDOutline } from '../../build/logo/ETCDOutline.svg?react';
 export { default as LogoETCDSolid } from '../../build/logo/ETCDSolid.svg?react';
-export { default as LogoGithubSolid } from '../../build/logo/GithubSolid.svg?react';
 export { default as LogoGitLabOutline } from '../../build/logo/GitLabOutline.svg?react';
 export { default as LogoGitLabSolid } from '../../build/logo/GitLabSolid.svg?react';
+export { default as LogoGithubSolid } from '../../build/logo/GithubSolid.svg?react';
 export { default as LogoHelmOutline } from '../../build/logo/HelmOutline.svg?react';
 export { default as LogoHelmSolid } from '../../build/logo/HelmSolid.svg?react';
 export { default as LogoJinjaOutline } from '../../build/logo/JinjaOutline.svg?react';

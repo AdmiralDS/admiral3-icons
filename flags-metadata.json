@@ -1038,16 +1038,16 @@
     "rusName": "Остров Норфолк"
   },
   {
-    "path": "@admiral-ds/admiral3-icons/build/flags/NorthernMarianaIslands.svg",
-    "isoCode": "MNP",
-    "name": "NorthernMarianaIslands",
-    "rusName": "Северные Марианские Острова"
-  },
-  {
     "path": "@admiral-ds/admiral3-icons/build/flags/NorthMacedonia.svg",
     "isoCode": "MKD",
     "name": "NorthMacedonia",
     "rusName": "Северная Македония"
+  },
+  {
+    "path": "@admiral-ds/admiral3-icons/build/flags/NorthernMarianaIslands.svg",
+    "isoCode": "MNP",
+    "name": "NorthernMarianaIslands",
+    "rusName": "Северные Марианские Острова"
   },
   {
     "path": "@admiral-ds/admiral3-icons/build/flags/Norway.svg",
